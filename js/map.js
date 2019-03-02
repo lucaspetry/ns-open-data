@@ -108,27 +108,6 @@ const mapColorScale = d3.scaleLinear()
     .interpolate(d3.interpolateHcl)
     .range(theMap.colors);
 
-
-// Load datasets
-d3.csv('data/test.csv').then(function (data) {
-    datasets.test = transformDataByCounty(data);
-    console.log(datasets.test);
-
-    //pieChart("#pie2", data);
-});
-
-var TEMP = 0
-// Setup some interaction on screen elements
-d3.select("#btn-test").on('click', function (e) {
-    ++TEMP;
-    TEMP = TEMP % 3;
-    updateMap(theMap.indexData[TEMP].data);
-
-    pieChart("#pie0", theMap.getIndexParamsForCounty(0, 'Victoria'), theMap.getIndexParamNames(0));
-    pieChart("#pie1", theMap.getIndexParamsForCounty(1, 'Victoria'), theMap.getIndexParamNames(1));
-    pieChart("#pie2", theMap.getIndexParamsForCounty(2, 'Victoria'), theMap.getIndexParamNames(2));
-});
-
 function registerPieChart(selector) {
     d3.select(selector).on("click", function(d) {
         const self = d3.select(this);
@@ -155,8 +134,9 @@ function fetchDatasetValue(data, name) {
 
 // Update map colors using given data and variable
 function updateMap(data, tooltipHtml) {
+    console.log(data)
 
-    tooltipHtml = tooltipHtml || (d => d.name + " - " + d.value);
+    tooltipHtml = tooltipHtml || (d => { let name = countyName(d); return  `${name} - ${fetchDatasetValue(data, name)}`;});
 
     theMap.elements.attr('fill', function (d) {
         return mapColorScale(fetchDatasetValue(data, countyName(d)));
@@ -235,6 +215,8 @@ d3.json('data/map10.geojson').then(function (geojson) {
     theMap.elements = mapElements;
 
     verticalLegend("#map-legend", ['gray']);
+
+    updateMap(theMap.indexData[0].data);
 });
 
 function linspace(start, end, n) {

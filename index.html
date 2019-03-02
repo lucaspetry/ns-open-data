@@ -171,30 +171,18 @@
           <div class="col-8" id="main-view">
             <br>
             <div class="row" style="text-align: center;">
-              <svg id="content" width="700" height="700">
+              <svg id="content" width="700" height="350">
 
                 <g transform="translate(0, 50)">
                   <text x="40" y="-30" class="general-text">
                     <tspan fill="black">County:</tspan>
                     <tspan id="map-county-name" fill="black">NAME</tspan>
                   </text>
-
-                  <g transform="translate(20, 0)">
-                    <g id="pie0" class="pie" index="0" transform="translate(50,0)">
-                      <text>Index 0</text>
-                    </g>
-                    <g id="pie1" class="pie" index="1" transform="translate(275,0)">
-                      <text>Index 1</text>
-                    </g>
-                    <g id="pie2" class="pie" index="2" transform="translate(500,0)">
-                      <text>Index 2</text>
-                    </g>
-                  </g>
                 </g>
 
                 <g>
-                  <g transform="scale(1.8, 1.8) translate(-100, -100)">
-                  <g class="map" transform="translate(-5950,-2250) scale(20, 20)">
+                    <g transform="scale(25,25) ">
+                        <g class="map" transform="translate(-300,-122)">
                   </g>
                   </g>
                   <g id="map-legend" transform="translate(600,430)">
@@ -202,12 +190,26 @@
                   <text id="map-index-name" transform="translate(250,450)">Index 0</text>
                 </g>
               </svg>
-              <script src="js/map.js"></script>
+              
             </div>
             <div class="row">
-              <div class="col">CHART 1</div>
-              <div class="col">CHART 2</div>
-              <div class="col">CHART 3</div>
+              <div class="col-4">
+                <svg width="200" height="200">
+                    <g id="pie0" class="pie" index="0" transform="translate(50,0)">
+                        <text>Index 0</text>
+                      </g>
+                </svg>
+              </div>
+              <div class="col-4"><svg width="200" height="200">
+                  <g id="pie1" class="pie unfocus" index="1" transform="translate(50,0)">
+                      <text>Index 0</text>
+                    </g>
+              </svg></div>
+              <div class="col-4"><svg width="200" height="200">
+                  <g id="pie2" class="pie unfocus" index="2" transform="translate(50,0)">
+                      <text>Index 0</text>
+                    </g>
+              </svg></div>
             </div>
           </div>
           <div class="col-2" id="right-panel">
@@ -216,5 +218,7 @@
         </div>
       </main>
     </div>
+
+    <script src="js/map.js"></script>
   </body>
 </html>
