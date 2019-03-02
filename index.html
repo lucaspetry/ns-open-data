@@ -8,10 +8,12 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Custom styles for this template -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/d3.js"></script>
   </head>
   <body data-gr-c-s-loaded="true">
     <nav class="navbar navbar-expand-lg fixed-top flex-md-nowrap p-0" id="top-bar">
@@ -167,7 +169,46 @@
             </div>
           </div>
           <div class="col-8" id="main-view">
-            MAIN CONTENT
+            <br>
+            <div class="row" style="text-align: center;">
+              <svg id="content" width="700" height="700">
+
+                <g transform="translate(0, 50)">
+                  <text x="40" y="-30" class="general-text">
+                    <tspan fill="black">County:</tspan>
+                    <tspan id="map-county-name" fill="black">NAME</tspan>
+                  </text>
+
+                  <g transform="translate(20, 0)">
+                    <g id="pie0" class="pie" index="0" transform="translate(50,0)">
+                      <text>Index 0</text>
+                    </g>
+                    <g id="pie1" class="pie" index="1" transform="translate(275,0)">
+                      <text>Index 1</text>
+                    </g>
+                    <g id="pie2" class="pie" index="2" transform="translate(500,0)">
+                      <text>Index 2</text>
+                    </g>
+                  </g>
+                </g>
+
+                <g>
+                  <g transform="scale(1.8, 1.8) translate(-100, -100)">
+                  <g class="map" transform="translate(-5950,-2250) scale(20, 20)">
+                  </g>
+                  </g>
+                  <g id="map-legend" transform="translate(600,430)">
+                  </g>
+                  <text id="map-index-name" transform="translate(250,450)">Index 0</text>
+                </g>
+              </svg>
+              <script src="js/map.js"></script>
+            </div>
+            <div class="row">
+              <div class="col">CHART 1</div>
+              <div class="col">CHART 2</div>
+              <div class="col">CHART 3</div>
+            </div>
           </div>
           <div class="col-2" id="right-panel">
             LEFT SIDEBAR
