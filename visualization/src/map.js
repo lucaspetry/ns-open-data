@@ -116,6 +116,12 @@ function updateMap(data, variable, tooltipHtml) {
                 .duration(500)
                 .style("opacity", 0);
         });
+
+
+    const values = Object.keys(data).map(k => data[k].value)
+    max = d3.max(values);
+    min = d3.min(values);
+    verticalLegend("#map-legend", ['#D2E5F6', '#147FC4'], min, max);
 }
 
 // Generate map
@@ -156,7 +162,87 @@ d3.json('data/map10.geojson').then(function (geojson) {
         });;
 
     theMap.elements = mapElements;
+
+    verticalLegend("#map-legend", ['#D2E5F6', '#147FC4'], 0, 1);
 });
+
+function linspace(start, end, n) {
+    var out = [];
+    var delta = (end - start) / (n - 1);
+
+    var i = 0;
+    while (i < (n - 1)) {
+        out.push(start + (i * delta));
+        i++;
+    }
+
+    out.push(end);
+    return out;
+}
+
+
+function verticalLegend(selector, colors, min, max) {
+    var legendFullHeight = 200;
+    var legendFullWidth = 40;
+
+    var legendMargin = { top: 20, bottom: 20, left: 5, right: 20 };
+
+    // use same margins as main plot
+    var legendWidth = legendFullWidth - legendMargin.left - legendMargin.right;
+    var legendHeight = legendFullHeight - legendMargin.top - legendMargin.bottom;
+
+    // clear current legend
+    let legendSvg = d3.select(selector);
+
+    legendSvg.select("defs").remove();
+    legendSvg.select("g").remove();
+
+    // append gradient bar
+    var gradient = legendSvg.append('defs')
+        .append('linearGradient')
+        .attr('id', 'gradient')
+        .attr('x1', '0%') // bottom
+        .attr('y1', '100%')
+        .attr('x2', '0%') // to top
+        .attr('y2', '0%')
+        .attr('spreadMethod', 'pad');
+
+    // Generate gradient points
+    var pct = linspace(0, 100, colors.length).map(function (d) {
+        return Math.round(d) + '%';
+    });
+
+    var colourPct = d3.zip(pct, colors);
+
+    colourPct.forEach(function (d) {
+        gradient.append('stop')
+            .attr('offset', d[0])
+            .attr('stop-color', d[1])
+            .attr('stop-opacity', 1);
+    });
+
+    legendSvg.append('rect')
+        .attr('x1', 0)
+        .attr('y1', 0)
+        .attr('width', legendWidth)
+        .attr('height', legendHeight)
+        .style('fill', 'url(#gradient)');
+
+    // create a scale and axis for the legend
+    var legendScale = d3.scaleLinear()
+        .domain([min, max])
+        .range([legendHeight, 0]);
+
+    var legendAxis = d3.axisRight()
+        .scale(legendScale)
+        .tickFormat(d3.format("d"));
+
+    legendSvg.append("g")
+        .attr("class", "legend axis")
+        .attr("transform", "translate(" + legendWidth + ", 0)")
+        .call(legendAxis);
+};
+
 
 function pieChart(selector, data) {
 
