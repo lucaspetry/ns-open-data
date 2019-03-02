@@ -67,23 +67,24 @@ const datasets = {
 
 const theMap = {
     elements: null,
+    colors: ['#D2E5F6', '#147FC4'],
 };
 
 const nCounties = 50;
-const colors = d3.scaleLinear()
-    .domain([0, 50])
+const mapColorScale = d3.scaleLinear()
+    .domain([0, 1])
     .interpolate(d3.interpolateHcl)
-    .range(['#D2E5F6', '#147FC4']);
+    .range(theMap.colors);
 
 
 // Load datasets
 d3.csv('data/test.csv').then(function (data) {
     datasets.test = transformDataByCounty(data);
+    console.log(datasets.test);
 });
 
 // Setup some interaction on screen elements
 d3.select("#btn-test").on('click', function (e) {
-    console.log(datasets);
     updateMap(datasets.test, 'value');
 });
 
@@ -102,7 +103,7 @@ function updateMap(data, variable, tooltipHtml) {
     tooltipHtml = tooltipHtml || (d => countyName(d) + " - " + fetchDatasetValue(d, data, variable));
 
     theMap.elements.attr('fill', function (d) {
-        return colors(fetchDatasetValue(d, data, variable));
+        return mapColorScale(fetchDatasetValue(d, data, variable));
     }).on("mouseover", function (d) {
         theMap.tooltip.transition()
             .duration(200)
@@ -121,7 +122,7 @@ function updateMap(data, variable, tooltipHtml) {
     const values = Object.keys(data).map(k => data[k].value)
     max = d3.max(values);
     min = d3.min(values);
-    verticalLegend("#map-legend", ['#D2E5F6', '#147FC4'], min, max);
+    verticalLegend("#map-legend", theMap.colors);
 }
 
 // Generate map
@@ -145,7 +146,7 @@ d3.json('data/map10.geojson').then(function (geojson) {
     mapElements = mapElements.enter()
         .append('path')
         .attr('d', geoGenerator)
-        .attr('fill', function (d, i) { return colors(i) })
+        .attr('fill', 'gray')
         .merge(mapElements)
         .on("mouseover", function (d) {
             theMap.tooltip.transition()
@@ -163,7 +164,7 @@ d3.json('data/map10.geojson').then(function (geojson) {
 
     theMap.elements = mapElements;
 
-    verticalLegend("#map-legend", ['#D2E5F6', '#147FC4'], 0, 1);
+    verticalLegend("#map-legend", ['gray']);
 });
 
 function linspace(start, end, n) {
@@ -181,7 +182,7 @@ function linspace(start, end, n) {
 }
 
 
-function verticalLegend(selector, colors, min, max) {
+function verticalLegend(selector, colors) {
     var legendFullHeight = 200;
     var legendFullWidth = 40;
 
@@ -230,11 +231,12 @@ function verticalLegend(selector, colors, min, max) {
 
     // create a scale and axis for the legend
     var legendScale = d3.scaleLinear()
-        .domain([min, max])
+        .domain([0, 1])
         .range([legendHeight, 0]);
 
     var legendAxis = d3.axisRight()
         .scale(legendScale)
+        .tickValues([0, 1])
         .tickFormat(d3.format("d"));
 
     legendSvg.append("g")

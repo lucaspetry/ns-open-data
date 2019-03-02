@@ -1,19 +1,19 @@
 CO_CODE,CO_DESC,value
-LU,Lunenburg,1
-CU,Cumberland,2
-PI,Pictou,3
-KI,Kings,4
-IN,Inverness,5
-CO,Colchester,6
-AP,Annapolis,7
-GU,Guysborough,8
-HN,Hants,9
-CB,Cape Breton,10
-VI,Victoria,11
-AT,Antigonish,12
-YA,Yarmouth,13
-DI,Digby,14
-SH,Shelburne,15
-RI,Richmond,16
-QU,Queens,17
-HX,Halifax,18
+LU,Lunenburg,0.1
+CU,Cumberland,0.1
+PI,Pictou,0.4
+KI,Kings,0.5
+IN,Inverness,0.6
+CO,Colchester,0.8
+AP,Annapolis,0.1
+GU,Guysborough,0.5
+HN,Hants,0.3
+CB,Cape Breton,0.9
+VI,Victoria,1.0
+AT,Antigonish,0.8
+YA,Yarmouth,0.9
+DI,Digby,0.1
+SH,Shelburne,0.3
+RI,Richmond,0.4
+QU,Queens,0.5
+HX,Halifax,0.6
