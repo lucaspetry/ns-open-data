@@ -98,7 +98,7 @@ function updateMapWithIndex(data) {
 
 // Update map colors using given data and variable
 function updateMap(data, variable, tooltipHtml) {
-    
+
     tooltipHtml = tooltipHtml || (d => countyName(d) + " - " + fetchDatasetValue(d, data, variable));
 
     theMap.elements.attr('fill', function (d) {
@@ -111,11 +111,11 @@ function updateMap(data, variable, tooltipHtml) {
             .style("left", (d3.event.pageX) + "px")
             .style("top", (d3.event.pageY - 28) + "px");
     })
-    .on("mouseout", function (d) {
-        theMap.tooltip.transition()
-            .duration(500)
-            .style("opacity", 0);
-    });
+        .on("mouseout", function (d) {
+            theMap.tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
 }
 
 // Generate map
@@ -129,7 +129,7 @@ d3.json('data/map10.geojson').then(function (geojson) {
     let mapElements = d3.select('#content g.map')
         .selectAll('path')
         .data(geojson.features);
-    
+
     // Tooltip
     theMap.tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
@@ -158,50 +158,75 @@ d3.json('data/map10.geojson').then(function (geojson) {
     theMap.elements = mapElements;
 });
 
+function pieChart(selector, data) {
 
-// Pie chart
-data = {
-    "A": 5,
-    "B": 10,
-    "C": 20
-};
+    var radius = 60;
 
-chart = {
-    const arcs = pie(data);
-  
-    const svg = d3.select(DOM.svg(width, height))
-        .attr("text-anchor", "middle")
-        .style("font", "12px sans-serif");
-  
-    const g = svg.append("g")
-        .attr("transform", `translate(${width / 2},${height / 2})`);
-    
-    g.selectAll("path")
-      .data(arcs)
-      .enter().append("path")
-        .attr("fill", d => color(d.data.name))
-        .attr("stroke", "white")
+    var paramColors = d3.scaleOrdinal()
+        .range(["#98abc5", "#8a89a6", "#7b6888"]);
+
+    var arc = d3.arc()
+        .outerRadius(radius - 10)
+        .innerRadius(0);
+
+    var labelArc = d3.arc()
+        .outerRadius(radius - 40)
+        .innerRadius(radius - 40);
+
+    var pie = d3.pie()
+        .sort(null)
+        .value(function (d) { return d.value; });
+
+    var svg = d3.select(selector)
+        .append("g")
+        .attr("transform", "translate(" + radius + "," + radius + ")");
+
+    var g = svg.selectAll(".arc")
+        .data(pie(data))
+        .enter().append("g")
+        .attr("class", "arc");
+
+    g.append("path")
         .attr("d", arc)
-      .append("title")
-        .text(d => `${d.data.name}: ${d.data.value.toLocaleString()}`);
-  
-    const text = g.selectAll("text")
-      .data(arcs)
-      .enter().append("text")
-        .attr("transform", d => `translate(${arcLabel.centroid(d)})`)
-        .attr("dy", "0.35em");
-    
-    text.append("tspan")
-        .attr("x", 0)
-        .attr("y", "-0.7em")
-        .style("font-weight", "bold")
-        .text(d => d.data.name);
-    
-    text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
-        .attr("x", 0)
-        .attr("y", "0.7em")
-        .attr("fill-opacity", 0.7)
-        .text(d => d.data.value.toLocaleString());
-  
+        .style("fill", function (d) { return paramColors(d.value); });
+
+    g.append("text")
+        .attr("transform", function (d) { return "translate(" + labelArc.centroid(d) + ")"; })
+        .attr("dy", ".35em")
+        .text(function (d) { return d.value; });
+
+    const lx = -50, ly = radius, siz = 15;
+    let legend = g.append("g")
+        .attr("class", "legend");
+
+    rects = legend.selectAll("rect").data(data);
+
+    rects.enter().append("rect")
+        .attr("x", lx)
+        .attr("y", (d, i) => ly + i * 15)
+        .merge(rects)
+        .attr("width", siz)
+        .attr("height", siz)
+        .attr("fill", d => paramColors(d.value));
+
+
+    texts = legend.selectAll("text").data(data);
+
+    texts.enter().append("text")
+        .attr("x", lx + siz + 10)
+        .attr("y", (d, i) => ly + i * 15 + siz * 0.6)
+        .merge(texts)
+        .text(d => `${d.name} (${d.value})`);
+
+
     return svg.node();
-  }
+}
+
+data = [
+    { name: "p0", value: 10 },
+    { name: "p1", value: 30 },
+    { name: "p2", value: 50 },
+]
+pieChart("#pie0", data);
+pieChart("#pie1", data);
+pieChart("#pie2", data);
