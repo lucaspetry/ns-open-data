@@ -12,19 +12,38 @@
 
 <body>
 
-	<svg id="content" width="1100" height="400">
-		<g id="pie0" transform="translate(0,0)">
-		</g>
-		<g id="pie1" transform="translate(200,0)">
-		</g>
-		<g id="pie2" transform="translate(400,0)">
-		</g>
-		<g class="map" transform="translate(-9000,-3700) scale(30, 30)">
-		</g>
-	</svg>
-	<button id="btn-test">Click me</button>
+	<div>
+		<svg id="content" width="600" height="600">
 
-	<script src="map.js"></script>
+			<g transform="translate(0, 50)">
+				<text x="40" y="-30" class="general-text">
+					<tspan fill="black">County:</tspan>
+					<tspan id="map-county-name" fill="black">NAME</tspan>
+				</text>
+
+				<g id="pie0" class="pie" index="0" transform="translate(50,0)">
+					<text>Index 0</text>
+				</g>
+				<g id="pie1" class="pie" index="1" transform="translate(250,0)">
+					<text>Index 1</text>
+				</g>
+				<g id="pie2" class="pie" index="2" transform="translate(450,0)">
+					<text>Index 2</text>
+				</g>
+			</g>
+
+			<g>
+				<g class="map" transform="translate(-5950,-2250) scale(20, 20)">
+				</g>
+				<g id="map-legend" transform="translate(500,250)">
+				</g>
+				<text id="map-index-name" transform="translate(250,450)">Index 0</text>
+			</g>
+		</svg>
+		<button id="btn-test">Click me</button>
+
+		<script src="map.js"></script>
+	</div>
 
 </body>
 

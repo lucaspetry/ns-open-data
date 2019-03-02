@@ -11,3 +11,22 @@ div.tooltip {
     border-radius: 8px;			
     pointer-events: none;			
 }
+
+
+.arc text {
+    font: 10px sans-serif;
+    text-anchor: middle;
+}
+  
+.arc path {
+    stroke: #fff;
+}
+  
+
+.legend text {
+    text-anchor: start
+}
+
+.pie.unfocus {
+    opacity: 0.4
+}
