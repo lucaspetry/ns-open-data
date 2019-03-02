@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
     <!-- Custom styles for this template -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
   <body data-gr-c-s-loaded="true">
     <nav class="navbar navbar-expand-lg fixed-top flex-md-nowrap p-0" id="top-bar">
@@ -41,9 +44,127 @@
 
     <div class="container-fluid">
       <main role="main" class="px-0" id="main-content">
-        <div class="row">
+        <div class="row p-1">
           <div class="col-2" id="left-panel">
-            RIGHT SIDEBAR
+            <br><br>
+            <a href="#select-index" data-toggle="collapse" role="button"><h6>Select Indicators to View</h6></a>
+            <div class="collapse" id="select-index">
+              <div class="form-group">
+                <div id="select-indices">
+                  <div class="row form-group">
+                    <div class="col-md-auto">
+                      <select class="form-control form-control-sm">
+                        <option selected disabled>Select an index</option>
+                        <option>Something</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <button class="btn btn-sm btn-primary" onclick="addIndex(this)">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script type="text/javascript">
+                function addIndex(btn) {
+                  btn.remove('.btn');
+                  console.log('here!')
+                  $('#select-indices').append(`
+                    <div class="row form-group">
+                      <div class="col-md-auto">
+                        <select class="form-control form-control-sm">
+                          <option selected disabled>Select an index</option>
+                          <option>Something</option>
+                        </select>
+                      </div>
+                      <div class="col">
+                        <button class="btn btn-sm btn-primary" onclick="addIndex(this)">+</button>
+                      </div>
+                    </div>`);
+                }
+              </script>
+              <div class="row d-flex flex-row-reverse m-2">
+                <button class="btn btn-sm btn-primary" onclick="viewIndices(this)">View</button>
+              </div>
+              <script type="text/javascript">
+                function viewIndices(obj) {
+
+                }
+              </script>
+            </div>
+            <br>
+            <a href="#create-index" data-toggle="collapse" role="button"><h6>Create an Index</h6></a>
+            <div class="collapse" id="create-index">
+              <div class="form-group">
+                <label class="form-label" id="create-name">Name</label>
+                <input class="form-control form-control-sm" id="input-index-name" aria-describedby="nameHelp" placeholder="Enter index name">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Category</label>
+                <select class="form-control form-control-sm">
+                  <option selected disabled>Select a category</option>
+                  <option>Business and Economy</option>
+                  <option>Communities and Social Services</option>
+                  <option>Government Administration</option>
+                  <option>Nature and Environment</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Dataset</label>
+                <select class="form-control form-control-sm">
+                  <option selected disabled>Select a dataset</option>
+                  <option>Dataset 1</option>
+                  <option>Dataset 2</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Variables</label>
+                <div id="create-variables">
+                  <div class="row form-group">
+                    <div class="col-7">
+                      <select class="form-control form-control-sm">
+                        <option selected disabled>Select a variable</option>
+                        <option>Something</option>
+                      </select>
+                    </div>
+                    <div class="col-3">
+                      <input class="form-control form-control-sm" value="1" maxlength="2">
+                    </div>
+                    <div class="col-1">
+                      <button class="btn btn-sm btn-primary" onclick="addVariable(this)">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script type="text/javascript">
+                function addVariable(btn) {
+                  btn.remove('.btn');
+                  console.log('here!')
+                  $('#create-variables').append(`
+                    <div class="row form-group">
+                      <div class="col-7">
+                        <select class="form-control form-control-sm">
+                          <option selected disabled>Select a variable</option>
+                          <option>Something</option>
+                        </select>
+                      </div>
+                      <div class="col-3">
+                        <input class="form-control form-control-sm" value="1" maxlength="2">
+                      </div>
+                      <div class="col-1">
+                        <button class="btn btn-sm btn-primary" onclick="addVariable(this)">+</button>
+                      </div>
+                    </div>`);
+                }
+              </script>
+              <div class="row d-flex flex-row-reverse m-2">
+                <button class="btn btn-sm btn-primary" onclick="createIndex(this)">Create</button>
+              </div>
+              <script type="text/javascript">
+                function createIndex(obj) {
+
+                }
+              </script>
+            </div>
           </div>
           <div class="col-8" id="main-view">
             MAIN CONTENT
@@ -54,7 +175,5 @@
         </div>
       </main>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
