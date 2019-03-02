@@ -68,6 +68,38 @@ const datasets = {
 const theMap = {
     elements: null,
     colors: ['#D2E5F6', '#147FC4'],
+
+    indexData: [
+        {
+            name: "Index 0",
+            params: ["X", "Y", "Z"],
+            data: [
+                { name: "Halifax", value: 1.0, params: [10, 30, 50] },
+                { name: "Victoria", value: 0.1, params: [40, 30, 10] },]
+        },
+        {
+            name: "Index 1",
+            params: ["X", "Y", "Z"],
+            data: [
+                { name: "Halifax", value: 0.5, params: [30, 55, 111] },
+                { name: "Victoria", value: 0.7, params: [10, 55, 10] },]
+        },
+        {
+            name: "Index 2",
+            params: ["X", "Y", "Z"],
+            data: [
+                { name: "Halifax", value: 0.4, params: [3, 5, 8] },
+                { name: "Victoria", value: 0.8, params: [12, 5, 9] },]
+        },
+    ],
+
+    getIndexParamsForCounty: function (index, name) {
+        const line = this.indexData[index].data.findIndex(d => d.name == name);
+        return this.indexData[index].data[line].params;
+    },
+    getIndexParamNames: function (index) {
+        return this.indexData[index].params;
+    }
 };
 
 const nCounties = 50;
@@ -81,29 +113,53 @@ const mapColorScale = d3.scaleLinear()
 d3.csv('data/test.csv').then(function (data) {
     datasets.test = transformDataByCounty(data);
     console.log(datasets.test);
+
+    //pieChart("#pie2", data);
 });
 
+var TEMP = 0
 // Setup some interaction on screen elements
 d3.select("#btn-test").on('click', function (e) {
-    updateMap(datasets.test, 'value');
+    ++TEMP;
+    TEMP = TEMP % 3;
+    updateMap(theMap.indexData[TEMP].data);
+
+    pieChart("#pie0", theMap.getIndexParamsForCounty(0, 'Victoria'), theMap.getIndexParamNames(0));
+    pieChart("#pie1", theMap.getIndexParamsForCounty(1, 'Victoria'), theMap.getIndexParamNames(1));
+    pieChart("#pie2", theMap.getIndexParamsForCounty(2, 'Victoria'), theMap.getIndexParamNames(2));
 });
 
-function fetchDatasetValue(d, data, variable) {
-    return data[countyName(d)][variable];
+function registerPieChart(selector) {
+    d3.select(selector).on("click", function(d) {
+        const self = d3.select(this);
+        let index = self.attr("index");
+        d3.select("#map-index-name").text(theMap.indexData[index].name);
+        console.log(d3.select("#map-index-name"))
+        updateMap(theMap.indexData[index].data);
+        d3.selectAll(".pie").classed("unfocus", true)
+        self.classed("unfocus", false);
+    });
 }
 
-// Assuming: data { county: value, ... }
-function updateMapWithIndex(data) {
-    updateMap(data, 'value');
+registerPieChart("#pie0");
+registerPieChart("#pie1");
+registerPieChart("#pie2");
+
+function fetchDatasetValue(data, name) {
+    idx = data.findIndex(d => d.name === name);
+    if (idx == -1) {
+        return 0;
+    }
+    return data[idx].value;
 }
 
 // Update map colors using given data and variable
-function updateMap(data, variable, tooltipHtml) {
+function updateMap(data, tooltipHtml) {
 
-    tooltipHtml = tooltipHtml || (d => countyName(d) + " - " + fetchDatasetValue(d, data, variable));
+    tooltipHtml = tooltipHtml || (d => d.name + " - " + d.value);
 
     theMap.elements.attr('fill', function (d) {
-        return mapColorScale(fetchDatasetValue(d, data, variable));
+        return mapColorScale(fetchDatasetValue(data, countyName(d)));
     }).on("mouseover", function (d) {
         theMap.tooltip.transition()
             .duration(200)
@@ -111,12 +167,21 @@ function updateMap(data, variable, tooltipHtml) {
         theMap.tooltip.html(tooltipHtml(d))
             .style("left", (d3.event.pageX) + "px")
             .style("top", (d3.event.pageY - 28) + "px");
-    })
-        .on("mouseout", function (d) {
-            theMap.tooltip.transition()
-                .duration(500)
-                .style("opacity", 0);
-        });
+
+        d3.select(this).attr("stroke", 'black').attr("stroke-width", 0.03);
+    }).on("mouseout", function (d) {
+        theMap.tooltip.transition()
+            .duration(500)
+            .style("opacity", 0);
+
+        d3.select(this).attr("stroke", 'black').attr("stroke-width", 0.0);
+    }).on("click", function (d) {
+        const name = countyName(d)
+        d3.select("#map-county-name").text(name);
+        pieChart("#pie0", theMap.getIndexParamsForCounty(0, name), theMap.getIndexParamNames(0));
+        pieChart("#pie1", theMap.getIndexParamsForCounty(1, name), theMap.getIndexParamNames(1));
+        pieChart("#pie2", theMap.getIndexParamsForCounty(2, name), theMap.getIndexParamNames(2));
+    });
 
 
     const values = Object.keys(data).map(k => data[k].value)
@@ -160,6 +225,11 @@ d3.json('data/map10.geojson').then(function (geojson) {
             theMap.tooltip.transition()
                 .duration(500)
                 .style("opacity", 0);
+        }).on("click", function (d) {
+            const name = countyName(d)
+            pieChart("#pie0", theMap.getIndexParamsForCounty(0, name), theMap.getIndexParamNames(0));
+            pieChart("#pie1", theMap.getIndexParamsForCounty(1, name), theMap.getIndexParamNames(1));
+            pieChart("#pie2", theMap.getIndexParamsForCounty(2, name), theMap.getIndexParamNames(2));
         });;
 
     theMap.elements = mapElements;
@@ -246,8 +316,7 @@ function verticalLegend(selector, colors) {
 };
 
 
-function pieChart(selector, data) {
-
+function pieChart(selector, data, names) {
     var radius = 60;
 
     var paramColors = d3.scaleOrdinal()
@@ -263,58 +332,67 @@ function pieChart(selector, data) {
 
     var pie = d3.pie()
         .sort(null)
-        .value(function (d) { return d.value; });
+        .value(function (d) { return d; });
 
-    var svg = d3.select(selector)
-        .append("g")
-        .attr("transform", "translate(" + radius + "," + radius + ")");
+    var svg = d3.select(selector + " g");
+    if (svg.empty()) {
+        svg = d3.select(selector).append("g")
+            .attr("transform", "translate(" + radius + "," + radius + ")");
+    }
 
-    var g = svg.selectAll(".arc")
-        .data(pie(data))
-        .enter().append("g")
+    var arcs = svg.selectAll(".arc")
+        .data(pie(data));
+
+    newGs = arcs.enter().append("g")
         .attr("class", "arc");
+    newGs.append("path");
+    //newGs.append("text");
+    newGs.append("g").attr("class", "legend");
 
-    g.append("path")
-        .attr("d", arc)
-        .style("fill", function (d) { return paramColors(d.value); });
+    arcs.exit().remove();
 
-    g.append("text")
-        .attr("transform", function (d) { return "translate(" + labelArc.centroid(d) + ")"; })
+    arcs = newGs.merge(arcs);
+
+    arcs.select("path");
+    //arcs.select("text");
+
+    let paths = arcs.selectAll("path");
+    paths.attr("d", arc)
+        .style("fill", function (d, i) { return paramColors(d.index); });
+
+    /*let texts = arcs.selectAll("text");
+    texts.attr("transform", function (d) { console.log(d); return "translate(" + labelArc.centroid(d) + ")"; })
         .attr("dy", ".35em")
-        .text(function (d) { return d.value; });
+        .text(function (d) { return d.value; });*/
 
     const lx = -50, ly = radius, siz = 15;
-    let legend = g.append("g")
-        .attr("class", "legend");
+    let legend = arcs.selectAll(".legend");
 
-    rects = legend.selectAll("rect").data(data);
+    let rects = legend.selectAll("rect").data(data);
+    rects.exit().remove();
 
     rects.enter().append("rect")
+        .merge(rects)
         .attr("x", lx)
         .attr("y", (d, i) => ly + i * 15)
-        .merge(rects)
         .attr("width", siz)
         .attr("height", siz)
-        .attr("fill", d => paramColors(d.value));
+        .attr("fill", (d, i) => paramColors(i));
 
 
-    texts = legend.selectAll("text").data(data);
+    let legTexts = legend.selectAll("text.leg").data(data);
+    legTexts.exit().remove();
 
-    texts.enter().append("text")
+    legTexts.enter().append("text")
+        .attr("class", "leg")
+        .merge(legTexts)
         .attr("x", lx + siz + 10)
-        .attr("y", (d, i) => ly + i * 15 + siz * 0.6)
-        .merge(texts)
-        .text(d => `${d.name} (${d.value})`);
-
+        .attr("y", (d, i) => ly + i * 15 + siz * 0.7)
+        .text((d, i) => `${names[i]} : ${d}`);
 
     return svg.node();
 }
 
-data = [
-    { name: "p0", value: 10 },
-    { name: "p1", value: 30 },
-    { name: "p2", value: 50 },
-]
-pieChart("#pie0", data);
-pieChart("#pie1", data);
-pieChart("#pie2", data);
+pieChart("#pie0", theMap.getIndexParamsForCounty(0, 'Halifax'), theMap.getIndexParamNames(0));
+pieChart("#pie1", theMap.getIndexParamsForCounty(1, 'Halifax'), theMap.getIndexParamNames(1));
+pieChart("#pie2", theMap.getIndexParamsForCounty(2, 'Halifax'), theMap.getIndexParamNames(2));
