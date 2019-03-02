@@ -40,30 +40,19 @@
     </nav>
 
     <div class="container-fluid">
-      <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-          <div class="sidebar-sticky" id="menu">
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-              <span>Something</span>
-            </h6>
-
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-              <span>Something Else</span>
-            </h6>
+      <main role="main" class="px-0" id="main-content">
+        <div class="row">
+          <div class="col-2" id="left-panel">
+            RIGHT SIDEBAR
           </div>
-        </nav>
-
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" id="main-content">
-          <div class="row">
-            <div class="col-8" id="main-view">
-              MAIN CONTENT
-            </div>
-            <div class="col-1" id="right-panel">
-              SIDEBAR
-            </div>
+          <div class="col-8" id="main-view">
+            MAIN CONTENT
           </div>
-        </main>
-      </div>
+          <div class="col-2" id="right-panel">
+            LEFT SIDEBAR
+          </div>
+        </div>
+      </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
