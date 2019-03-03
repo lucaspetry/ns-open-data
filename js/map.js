@@ -348,9 +348,9 @@ function verticalLegend(selector, colors, max) {
     var gradient = legendSvg.append('defs')
         .append('linearGradient')
         .attr('id', 'gradient')
-        .attr('x1', '100%') // bottom
+        .attr('x1', '0%')
         .attr('y1', '0%')
-        .attr('x2', '0%') // to top
+        .attr('x2', '100%')
         .attr('y2', '0%')
         .attr('spreadMethod', 'pad');
 
@@ -371,7 +371,12 @@ function verticalLegend(selector, colors, max) {
     rect = legendSvg.select('rect');
     if (rect.empty()) {
         rect = legendSvg.append("rect");
+        text = legendSvg.append("text")
+                .attr("x", 50)
+                .attr("y", 44)
+                .text("Index Intensity");
     }
+
     rect.attr('x1', 0)
         .attr('y1', 0)
         .attr('width', legendWidth)
