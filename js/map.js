@@ -186,6 +186,7 @@ function mapClick(d) {
 
     const name = countyName(d)
     d3.select("#map-county-name").text(name);
+    d3.select('#county-label').style('visibility', 'visible');
     theMap.selected = name;
     pieChart("#pie0", theMap.getIndexParamsForCounty(0, name), theMap.getIndexParamNames(0));
     pieChart("#pie1", theMap.getIndexParamsForCounty(1, name), theMap.getIndexParamNames(1));
