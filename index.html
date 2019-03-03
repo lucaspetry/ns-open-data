@@ -103,9 +103,11 @@
                   console.log('View indices!');
                   d3.select("#pie0-text").text(theMap.indexData[0].name);
                   d3.select("#pie1-text").text(theMap.indexData[1].name);
-
+                  d3.select("#piechart-view").attr("hidden", null);
+                  d3.select("#rank-view").attr("hidden", null);
                   pieChart("#pie0", theMap.getIndexParamsForCounty(0, 'Halifax'), theMap.getIndexParamNames(0));
                   pieChart("#pie1", theMap.getIndexParamsForCounty(1, 'Halifax'), theMap.getIndexParamNames(1));
+                  updateMap(theMap.indexData[0].data);
                 }
               </script>
             </div>
@@ -216,19 +218,19 @@
                   </g>
                 </svg>       
             </div>
-            <div class="row">
+            <div id="piechart-view" class="row" hidden>
               <div class="col"></div>
               <div class="col">
                 <h6 id="pie0-text">Index 0</h6>
                 <svg width="250" height="250">
-                  <g id="pie0" class="pie" index="0" transform="translate(30,0)"></g>
+                  <g id="pie0" class="pie" index="0"></g>
                 </svg>
               </div>
               <div class="col"></div>
               <div class="col">
                 <h6 id="pie1-text">Index 1</h6>
                 <svg width="250" height="250">
-                  <g id="pie1" class="pie unfocus" index="1" transform="translate(50,0)">
+                  <g id="pie1" class="pie unfocus" index="1">
                       <text>Index 0</text>
                     </g>
                 </svg>
@@ -238,17 +240,18 @@
           </div>
           <div class="col-2" id="right-panel">
             <br>
-            <h6 class="sidebar-heading d-flex justify-content-between align-items-center text-muted"><span>Index Ranking</span></h6>
-            <svg width="260" height="400">
-                <g id="county-ranking" class="ranking" transform="translate(0, 10)">
-                  
-                </g>
-            </svg>
-            <svg width="260" height="250">
-                <g id="county-timelapse" class="linegraph" transform="translate(0, 10)">
-                  
-                </g>
-            </svg>
+            <div id="rank-view" hidden>
+              <h6 class="sidebar-heading d-flex justify-content-between align-items-center text-muted"><span>Index Ranking</span></h6>
+              <svg width="260" height="400">
+                  <g id="county-ranking" class="ranking" transform="translate(0, 10)">
+                  </g>
+              </svg>
+              <h6 class="sidebar-heading d-flex justify-content-between align-items-center text-muted"><span>Index Timelapse</span></h6>
+              <svg width="260" height="250">
+                  <g id="county-timelapse" class="linegraph" transform="translate(0, 10)">
+                  </g>
+              </svg>
+            </div>
           </div>
         </div>
       </main>
@@ -284,7 +287,6 @@
             theMap.indexData[0] = criminality_idx['2017'];
             pieChart("#pie0", theMap.getIndexParamsForCounty(0, 'Halifax'), theMap.getIndexParamNames(0));
             pieChart("#pie1", theMap.getIndexParamsForCounty(1, 'Halifax'), theMap.getIndexParamNames(1));
-            pieChart("#pie2", theMap.getIndexParamsForCounty(2, 'Halifax'), theMap.getIndexParamNames(2));
           })
           .catch((err) => {
             console.log(err);

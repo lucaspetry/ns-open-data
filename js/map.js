@@ -62,7 +62,7 @@ function countyName(d) {
 
 
 function randParam() {
-    return Math.floor(Math.random() * 500);
+    return Math.floor(Math.random() * 100) / 100;
 }
 function randValue() {
     return Math.random();
@@ -102,8 +102,8 @@ const theMap = {
                 { name: "Halifax", value: randValue(), params: [randParam(), randParam(), randParam()] }]
         },
         {
-            name: "Index 1",
-            params: ["X", "Y", "Z"],
+            name: "Healthcare (Mock-up)",
+            params: ["Circulatory System Diseases", "Digestive System Diseases", "Respiratory System Diseases"],
             data: [
                 { name: "Lunenburg", value: randValue(), params: [randParam(), randParam(), randParam()] },
                 { name: "Cumberland", value: randValue(), params: [randParam(), randParam(), randParam()] },
@@ -192,7 +192,7 @@ function mapClick(d) {
     pieChart("#pie2", theMap.getIndexParamsForCounty(2, name), theMap.getIndexParamNames(2));
     d3.selectAll(".selectFocus").classed("focus", d => theMap.selected == d.name);
     d3.selectAll(".selectFocusMap").classed("focus", d => theMap.selected == countyName(d));
-
+    
     lineGraph(dataset);
 
 }
@@ -309,7 +309,7 @@ d3.json('data/map10.geojson').then(function (geojson) {
 
     verticalLegend("#map-legend", ['gray'], 1.0);
 
-    updateMap(theMap.indexData[0].data);
+    //updateMap(theMap.indexData[0].data);
 });
 
 function linspace(start, end, n) {
@@ -389,7 +389,7 @@ function verticalLegend(selector, colors, max) {
 
     legendSvg.append("g")
         .attr("class", "legend axis")
-        .attr("transform", "translate(0, "+legendHeight+")")
+        .attr("transform", "translate(0, " + legendHeight + ")")
         .call(legendAxis);
 };
 
@@ -452,7 +452,7 @@ function pieChart(selector, data, names) {
     rects.enter().append("rect")
         .merge(rects)
         .attr("x", lx)
-        .attr("y", (d, i) => ly + i * 15)
+        .attr("y", (d, i) => ly + i * 17)
         .attr("width", siz)
         .attr("height", siz)
         .attr("fill", (d, i) => paramColors(i));
@@ -465,7 +465,7 @@ function pieChart(selector, data, names) {
         .attr("class", "leg")
         .merge(legTexts)
         .attr("x", lx + siz + 10)
-        .attr("y", (d, i) => ly + i * 15 + siz * 0.7)
+        .attr("y", (d, i) => ly + i * 18 + siz * 0.7)
         .text((d, i) => `${names[i]} : ${(+d).toFixed(2)}`);
 
     return svg.node();
@@ -477,9 +477,6 @@ function lineGraph(data) {
         , width = 240 - margin.left - margin.right // Use the window's width 
         , height = 240 - margin.top - margin.bottom; // Use the window's height
 
-    // The number of datapoints
-    var n = data.length;
-
     var xScale = d3.scaleBand()
         .domain(data.map(d => d.x))
         .range([0, width]); // output
@@ -489,7 +486,6 @@ function lineGraph(data) {
         .domain([0, 1]) // input 
         .range([height, 0]); // output 
 
-
     // 7. d3's line generator
     var line = d3.line()
         .x(function (d, i) { return xScale(d.x); }) // set the x values for the line generator
@@ -497,9 +493,17 @@ function lineGraph(data) {
         .curve(d3.curveMonotoneX) // apply smoothing to the line
 
     // 1. Add the SVG to the page and employ #2
-    var svg = d3.select("#county-timelapse")
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    var svg = d3.select("#county-timelapse");
+
+    if (svg.select("g").empty()) {
+        svg = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    } else {
+        svg.select("g").remove();
+        svg = d3.select("#county-timelapse")
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    }
 
     // 3. Call the x axis in a group tag
     svg.append("g")
