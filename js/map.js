@@ -194,6 +194,7 @@ function mapClick(d) {
     pieChart("#pie2", theMap.getIndexParamsForCounty(2, name), theMap.getIndexParamNames(2));
     d3.selectAll(".selectFocus").classed("focus", d => theMap.selected == d.name);
     d3.selectAll(".selectFocusMap").classed("focus", d => theMap.selected == countyName(d));
+    d3.selectAll("#timelapse-div").attr("hidden", null);
 
     lineGraph(dataset);
 
@@ -449,7 +450,7 @@ function pieChart(selector, data, names) {
     var radius = 60;
 
     var paramColors = d3.scaleOrdinal()
-        .range(["#5ccda0", "#5cc7cd", "#9a8ccd"]);
+        .range(["#5ccda0", "#5cc7cd", "#9b9cce"]);
 
     var arc = d3.arc()
         .outerRadius(radius - 10)
@@ -573,13 +574,20 @@ function lineGraph(data) {
     svg.append("path")
         .datum(dataset) // 10. Binds data to the line 
         .attr("class", "line") // Assign a class for styling 
-        .attr("d", line); // 11. Calls the line generator 
+        .attr("d", line) // 11. Calls the line generator 
+        .style("opacity", 0)
+        .transition().duration(900)
+        .style("opacity", 1);
 
     // 12. Appends a circle for each datapoint 
-    svg.selectAll(".dot")
-        .data(dataset)
-        .enter().append("circle") // Uses the enter().append() method
-        .attr("class", "dot") // Assign a class for styling
+    let dots = svg.selectAll(".dot")
+        .data(dataset);
+    dots = dots.enter().append("circle") // Uses the enter().append() method
+        .attr("class", "dot")
+        .attr("cx", function (d, i) { return xScale(d.x) })
+        .merge(dots); // Assign a class for styling
+        
+    dots.transition().duration(900)
         .attr("cx", function (d, i) { return xScale(d.x) })
         .attr("cy", function (d, i) { return yScale(d.y) })
         .attr("r", 5);
