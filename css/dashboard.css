@@ -21,7 +21,7 @@ body {
 }
 
 #top-bar .nav-item:hover {
-	background-color: #686A92;
+	background-color: #626B91;
 }
 
 #top-bar .nav-brand {
@@ -29,5 +29,9 @@ body {
 }
 
 #top-bar .active {
-	background-color: #686A92;
+	background-color: #626B91;
+}
+
+.text-dark-menu {
+  color: #1b3361;
 }

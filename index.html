@@ -17,10 +17,10 @@
   </head>
   <body data-gr-c-s-loaded="true">
       <div class="container-fluid bg-white p-0">
-        <div class="row"><img src="image/nova_scotia_logo.png" height="60px" width="235px" style="padding: 10px; margin-left: 15px"></div>
-        <div class="row" id="top-bar">
-          <nav class="navbar navbar-expand-lg">
-          <ul class="navbar-nav mr-auto" id="menu">
+        <div class="row"><img src="image/nova_scotia_logo.png" height="60px" width="215px" style="padding: 10px; margin-left: 20px"></div>
+        <div class="row p-0" id="top-bar">
+          <nav class="navbar navbar-expand-lg p-0" style="margin-left: 20px">
+          <ul class="navbar-nav p-0" id="menu">
             <li class="nav-item">
               <a class="nav-link" href="#">Home</a>
             </li>
@@ -46,13 +46,19 @@
       <!-- <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-center" href="#">TrajExp</a> -->
       <!-- <input class="form-control form-control-light w-100" type="text" placeholder="Search" aria-label="Search"> -->
 
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
       <main role="main" class="px-0" id="main-content">
         <div class="row p-1">
           <div class="col-2" id="left-panel">
-            <br>
-            <a href="#select-index" data-toggle="collapse" role="button"><h6>Select Indicators to View</h6></a>
-            <div class="collapse" id="select-index">
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-1 mt-4 mb-1 text-muted">
+              <span >Select Indices to View</span>
+              <a data-toggle="collapse" role="button" class="d-flex align-items-center text-muted" href="#select-index">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle svg-icon">
+              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+            </svg>
+              </a>
+            </h6>
+            <div class="collapse m-2" id="select-index">
               <div class="form-group">
                 <div id="select-indices">
                   <div class="row form-group">
@@ -64,7 +70,9 @@
                       </select>
                     </div>
                     <div class="col">
-                      <button class="btn btn-sm btn-primary" onclick="addIndex(this)">+</button>
+                      <button class="btn text-muted" style="padding: 0px; padding-top: 2px" onclick="addIndex(this)"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle">
+              <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+            </svg></button>
                     </div>
                   </div>
                 </div>
@@ -82,13 +90,13 @@
                         </select>
                       </div>
                       <div class="col">
-                        <button class="btn btn-sm btn-primary" onclick="addIndex(this)">+</button>
+                        <button class="btn text-muted" style="padding: 0px; padding-top: 2px" onclick="addIndex(this)"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg></button>
                       </div>
                     </div>`);
                 }
               </script>
-              <div class="row d-flex flex-row-reverse m-2">
-                <button class="btn btn-sm btn-primary" onclick="viewIndices(this)">View</button>
+              <div class="row m-1">
+                <button class="btn btn-sm btn-outline-secondary" onclick="viewIndices(this)">View</button>
               </div>
               <script type="text/javascript">
                 function viewIndices(obj) {
@@ -96,9 +104,15 @@
                 }
               </script>
             </div>
-            <br>
-            <a href="#create-index" data-toggle="collapse" role="button"><h6>Create an Index</h6></a>
-            <div class="collapse" id="create-index">
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-1 mt-4 mb-1 text-muted">
+              <span >Create an Index</span>
+              <a data-toggle="collapse" role="button" class="d-flex align-items-center text-muted" href="#create-index">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle svg-icon">
+              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+            </svg>
+              </a>
+            </h6>
+            <div class="collapse m-2" id="create-index">
               <div class="form-group">
                 <label class="form-label" id="create-name">Name</label>
                 <input class="form-control form-control-sm" id="input-index-name" aria-describedby="nameHelp" placeholder="Enter index name">
@@ -137,7 +151,8 @@
                       <input class="form-control form-control-sm" value="1" maxlength="2">
                     </div>
                     <div class="col-1">
-                      <button class="btn btn-sm btn-primary" onclick="addVariable(this)">+</button>
+                      <button class="btn text-muted" style="padding: 0px; padding-top: 2px" onclick="addVariable(this)"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle">
+                      <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg></button>
                     </div>
                   </div>
                 </div>
@@ -159,13 +174,14 @@
                         <input class="form-control form-control-sm" value="1" maxlength="2">
                       </div>
                       <div class="col-1">
-                        <button class="btn btn-sm btn-primary" onclick="addVariable(this)">+</button>
+                        <button class="btn text-muted" style="padding: 0px; padding-top: 2px" onclick="addVariable(this)"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle">
+                        <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path></svg></button>
                       </div>
                     </div>`);
                 }
               </script>
-              <div class="row d-flex flex-row-reverse m-2">
-                <button class="btn btn-sm btn-primary" onclick="createIndex(this)">Create</button>
+              <div class="row m-1">
+                <button class="btn btn-sm btn-outline-secondary" onclick="createIndex(this)">Create</button>
               </div>
               <script type="text/javascript">
                 function createIndex(obj) {
@@ -177,10 +193,10 @@
           <div class="col-8" id="main-view">
             <div class="p-3">
               <div class="row">
-                <h3>Index:</h3>&nbsp;<h3 id="map-index-name"></h3>
+                <h3 class="text-dark-menu">Index:</h3>&nbsp;<h3 class="text-dark-menu " id="map-index-name"></h3>
               </div>
               <div class="row">
-                <h4>County:</h4>&nbsp;<h4 id="map-county-name"></h4>
+                <h4 class="text-dark-menu ">County:</h4>&nbsp;<h4 class="text-dark-menu" id="map-county-name"></h4>
               </div>
             </div>
             <div class="row" style="text-align: center; margin-top: -60px">
@@ -217,7 +233,7 @@
           </div>
           <div class="col-2" id="right-panel">
             <br>
-            <h4>Index</h4>
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center text-muted"><span>Index Ranking</span></h6>
             <svg width="250" height="400">
                 <g id="county-ranking" class="ranking" transform="translate(0, 10)">
                   
