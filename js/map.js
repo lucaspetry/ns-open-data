@@ -159,10 +159,6 @@ const theMap = {
 };
 
 const nCounties = 50;
-const mapColorScale = d3.scaleLinear()
-    .domain([0, 1])
-    .interpolate(d3.interpolateHcl)
-    .range(theMap.colors);
 
 function registerPieChart(selector) {
     d3.select(selector).on("click", function (d) {
@@ -204,6 +200,11 @@ function mapClick(d) {
 // Update map colors using given data and variable
 function updateMap(data, tooltipHtml) {
     tooltipHtml = tooltipHtml || (d => { let name = countyName(d); return `${name} - ${fetchDatasetValue(data, name).toFixed(2)}`; });
+    var max = d3.max(data, d => d.value);
+    const mapColorScale = d3.scaleLinear()
+        .domain([0, max])
+        .interpolate(d3.interpolateHcl)
+        .range(theMap.colors);
 
     theMap.elements.attr('fill', function (d) {
         return mapColorScale(fetchDatasetValue(data, countyName(d)));
@@ -225,9 +226,8 @@ function updateMap(data, tooltipHtml) {
 
 
     const values = Object.keys(data).map(k => data[k].value)
-    max = d3.max(values);
-    min = d3.min(values);
-    verticalLegend("#map-legend", theMap.colors);
+    console.log(max)
+    verticalLegend("#map-legend", theMap.colors, max);
 
     // Do the ranking
     data.sort((a,b) => b.value - a.value);
@@ -241,10 +241,10 @@ function updateMap(data, tooltipHtml) {
     const rankScale = d3.scaleLinear().domain([0, 1]).range([0, 100]);
     const rankYScale = d3.scaleBand()
         .domain(data.map(function (d) { return d.name }))
-        .range([0, 200])
+        .range([0, 350])
         .padding(0.1)
 
-    rects.attr("x", 60)
+    rects.attr("x", 120)
         .attr("y", (d, i) => rankYScale(d.name))
         .attr("width", d => rankScale(d.value))
         .attr("height", rankYScale.bandwidth())
@@ -257,6 +257,14 @@ function updateMap(data, tooltipHtml) {
     rankTexts.attr("x", 0)
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth()*0.5)
         .text(d => d.name)
+        .classed("selectFocus", true);
+
+    rankTexts = rankingG.selectAll("text.v").data(data);
+    rankTexts.exit().remove();
+    rankTexts = rankTexts.enter().append("text").attr("class", "v").merge(rankTexts);
+    rankTexts.attr("x", d => rankScale(d.value) + 10 + 120)
+        .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth()*0.5)
+        .text(d => d.value.toFixed(2))
         .classed("selectFocus", true);
 }
 
@@ -299,7 +307,7 @@ d3.json('data/map10.geojson').then(function (geojson) {
 
     theMap.elements = mapElements;
 
-    verticalLegend("#map-legend", ['gray']);
+    verticalLegend("#map-legend", ['gray'], 1.0);
 
     updateMap(theMap.indexData[0].data);
 });
@@ -319,7 +327,7 @@ function linspace(start, end, n) {
 }
 
 
-function verticalLegend(selector, colors) {
+function verticalLegend(selector, colors, max) {
     var legendFullHeight = 200;
     var legendFullWidth = 40;
 
@@ -368,13 +376,13 @@ function verticalLegend(selector, colors) {
 
     // create a scale and axis for the legend
     var legendScale = d3.scaleLinear()
-        .domain([0, 1])
+        .domain([0, max])
         .range([legendHeight, 0]);
 
     var legendAxis = d3.axisRight()
         .scale(legendScale)
-        .tickValues([0, 1])
-        .tickFormat(d3.format("d"));
+        .tickValues([0, max])
+        .tickFormat(d3.format(".2f"));
 
     legendSvg.append("g")
         .attr("class", "legend axis")
@@ -455,7 +463,7 @@ function pieChart(selector, data, names) {
         .merge(legTexts)
         .attr("x", lx + siz + 10)
         .attr("y", (d, i) => ly + i * 15 + siz * 0.7)
-        .text((d, i) => `${names[i]} : ${d}`);
+        .text((d, i) => `${names[i]} : ${(+d).toFixed(2)}`);
 
     return svg.node();
 }

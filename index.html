@@ -16,39 +16,41 @@
     <script src="js/d3.js"></script>
   </head>
   <body data-gr-c-s-loaded="true">
-    <nav class="navbar navbar-expand-lg fixed-top flex-md-nowrap p-0" id="top-bar">
-      <div class="nav-brand col-sm-3 col-md-2 mr-0">
-        <img src="image/nova_scotia_logo.png" width="100%" style="background-color: #F8F9FA">
+      <div class="container-fluid bg-white p-0">
+        <div class="row"><img src="image/nova_scotia_logo.png" height="60px" width="235px" style="padding: 10px; margin-left: 15px"></div>
+        <div class="row" id="top-bar">
+          <nav class="navbar navbar-expand-lg">
+          <ul class="navbar-nav mr-auto" id="menu">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catalogue</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">User's Guide</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Developers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Survey</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Index Dashboard</a>
+            </li>
+          </ul></nav>
+        </div>
       </div>
-      <ul class="navbar-nav mr-auto" id="menu">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Catalogue</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">User's Guide</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Developers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Survey</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Index Dashboard</a>
-        </li>
-      </ul>
+      
       <!-- <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-center" href="#">TrajExp</a> -->
       <!-- <input class="form-control form-control-light w-100" type="text" placeholder="Search" aria-label="Search"> -->
-    </nav>
 
     <div class="container-fluid">
       <main role="main" class="px-0" id="main-content">
         <div class="row p-1">
           <div class="col-2" id="left-panel">
-            <br><br>
+            <br>
             <a href="#select-index" data-toggle="collapse" role="button"><h6>Select Indicators to View</h6></a>
             <div class="collapse" id="select-index">
               <div class="form-group">
@@ -173,52 +175,50 @@
             </div>
           </div>
           <div class="col-8" id="main-view">
-            <br>
-            <div class="row" style="text-align: center;">
-              <svg id="content" width="700" height="350">
-
-                <g transform="translate(0, 50)">
-                  <text x="40" y="-30" class="general-text">
-                    <tspan fill="black">County:</tspan>
-                    <tspan id="map-county-name" fill="black">NAME</tspan>
-                  </text>
-                </g>
-
-                <g>
-                    <g transform="scale(25,25) ">
-                        <g class="map" transform="translate(-300,-122)">
+            <div class="p-3">
+              <div class="row">
+                <h3>Index:</h3>&nbsp;<h3 id="map-index-name"></h3>
+              </div>
+              <div class="row">
+                <h4>County:</h4>&nbsp;<h4 id="map-county-name"></h4>
+              </div>
+            </div>
+            <div class="row" style="text-align: center; margin-top: -60px">
+                <svg id="content" width="100%" height="450px" viewBox="0 0 700 350">
+                  <g>
+                      <g transform="scale(25,25) ">
+                          <g class="map" transform="translate(-300,-124)">
+                    </g>
+                    </g>
+                    <g id="map-legend" transform="translate(600,130)">
+                    </g>
                   </g>
-                  </g>
-                  <g id="map-legend" transform="translate(600,430)">
-                  </g>
-                  <text id="map-index-name" transform="translate(250,450)">Index 0</text>
-                </g>
-              </svg>
-              
+                </svg>       
             </div>
             <div class="row">
-              <div class="col-4">
-                <svg width="200" height="200">
-                    <g id="pie0" class="pie" index="0" transform="translate(50,0)">
-                        <text>Index 0</text>
-                      </g>
+              <div class="col"></div>
+              <div class="col">
+                <h6 id="pie0-text">Index 0</h6>
+                <svg width="250" height="250">
+                  <g id="pie0" class="pie" index="0" transform="translate(30,0)"></g>
                 </svg>
               </div>
-              <div class="col-4"><svg width="200" height="200">
+              <div class="col"></div>
+              <div class="col">
+                <h6 id="pie1-text">Index 1</h6>
+                <svg width="250" height="250">
                   <g id="pie1" class="pie unfocus" index="1" transform="translate(50,0)">
                       <text>Index 0</text>
                     </g>
-              </svg></div>
-              <div class="col-4"><svg width="200" height="200">
-                  <g id="pie2" class="pie unfocus" index="2" transform="translate(50,0)">
-                      <text>Index 0</text>
-                    </g>
-              </svg></div>
+                </svg>
+              </div>
+              <div class="col"></div>
             </div>
           </div>
           <div class="col-2" id="right-panel">
-            LEFT SIDEBAR
-            <svg width="200" height="400">
+            <br>
+            <h4>Index</h4>
+            <svg width="250" height="400">
                 <g id="county-ranking" class="ranking" transform="translate(0, 10)">
                   
                 </g>
@@ -246,16 +246,19 @@
                   data: []
                 }
               }
-
-              criminality_idx[row.YEAR].data.push({
+              var d = {
                 name: row.CO_DESC,
-                value: 0,
                 params: [row[criminality_idx[row.YEAR].params[0]],
                          row[criminality_idx[row.YEAR].params[1]],
                          row[criminality_idx[row.YEAR].params[2]]]
-              });
+              };
+              d.value = d.params[0] * 0.2 + d.params[1] * 0.3 + d.params[2] * 0.5;
+              criminality_idx[row.YEAR].data.push(d);
             });
             theMap.indexData[0] = criminality_idx['2017'];
+            pieChart("#pie0", theMap.getIndexParamsForCounty(0, 'Halifax'), theMap.getIndexParamNames(0));
+            pieChart("#pie1", theMap.getIndexParamsForCounty(1, 'Halifax'), theMap.getIndexParamNames(1));
+            pieChart("#pie2", theMap.getIndexParamsForCounty(2, 'Halifax'), theMap.getIndexParamNames(2));
           })
           .catch((err) => {
             console.log(err);

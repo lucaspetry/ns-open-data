@@ -42,7 +42,7 @@ path.focus {
 }
 
 .ranking text {
-    font: 9px Arial;
+    font: 14px Arial;
     dominant-baseline: central;
 }
 
@@ -59,4 +59,8 @@ path.focus {
     stroke: black;
     stroke-width: 1.5;
     fill: #fff8b0
+}
+
+.legend text.leg {
+    font-size: 12px
 }
