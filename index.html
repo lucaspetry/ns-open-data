@@ -108,6 +108,7 @@
                   pieChart("#pie0", theMap.getIndexParamsForCounty(0, 'Halifax'), theMap.getIndexParamNames(0));
                   pieChart("#pie1", theMap.getIndexParamsForCounty(1, 'Halifax'), theMap.getIndexParamNames(1));
                   updateMap(theMap.indexData[0].data);
+                  d3.select("#map-index-name").text(theMap.indexData[0].name);
                 }
               </script>
             </div>

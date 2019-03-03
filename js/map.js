@@ -398,7 +398,7 @@ function pieChart(selector, data, names) {
     var radius = 60;
 
     var paramColors = d3.scaleOrdinal()
-        .range(["#98abc5", "#8a89a6", "#7b6888"]);
+        .range(["#5ccda0", "#5cc7cd", "#9a8ccd"]);
 
     var arc = d3.arc()
         .outerRadius(radius - 10)
