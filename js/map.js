@@ -192,7 +192,7 @@ function mapClick(d) {
     pieChart("#pie2", theMap.getIndexParamsForCounty(2, name), theMap.getIndexParamNames(2));
     d3.selectAll(".selectFocus").classed("focus", d => theMap.selected == d.name);
     d3.selectAll(".selectFocusMap").classed("focus", d => theMap.selected == countyName(d));
-    
+
     lineGraph(dataset);
 
 }
@@ -424,7 +424,6 @@ function pieChart(selector, data, names) {
     newGs = arcs.enter().append("g")
         .attr("class", "arc");
     newGs.append("path");
-    //newGs.append("text");
     newGs.append("g").attr("class", "legend");
 
     arcs.exit().remove();
@@ -432,16 +431,19 @@ function pieChart(selector, data, names) {
     arcs = newGs.merge(arcs);
 
     arcs.select("path");
-    //arcs.select("text");
 
     let paths = arcs.selectAll("path");
-    paths.attr("d", arc)
+    paths.transition()
+        .duration(900)
+        .attrTween("d", function (d) {
+            var interpolate = d3.interpolate(this._current, d);
+            var _this = this;
+            return function (t) {
+                _this._current = interpolate(t);
+                return arc(_this._current);
+            };
+        })
         .style("fill", function (d, i) { return paramColors(d.index); });
-
-    /*let texts = arcs.selectAll("text");
-    texts.attr("transform", function (d) { console.log(d); return "translate(" + labelArc.centroid(d) + ")"; })
-        .attr("dy", ".35em")
-        .text(function (d) { return d.value; });*/
 
     const lx = -radius, ly = radius, siz = 15;
     let legend = arcs.selectAll(".legend");
