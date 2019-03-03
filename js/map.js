@@ -380,7 +380,7 @@ function verticalLegend(selector, colors, max) {
     // create a scale and axis for the legend
     var legendScale = d3.scaleLinear()
         .domain([0, max])
-        .range([legendWidth, 0]);
+        .range([0, legendWidth]);
 
     var legendAxis = d3.axisBottom()
         .scale(legendScale)
