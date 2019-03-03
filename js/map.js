@@ -82,31 +82,70 @@ const theMap = {
             name: "Index 0",
             params: ["X", "Y", "Z"],
             data: [
-                { name: "Halifax", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Victoria", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Annapolis", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Lunenburg", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Colchester", value: randValue(), params: [randParam(), randParam(), randParam()] },]
+                { name: "Lunenburg", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Cumberland", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Pictou", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Kings", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Inverness", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Colchester", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Annapolis", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Guysborough", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Hants", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Cape", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Victoria", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Antigonish", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Yarmouth", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Digby", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Shelburne", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Richmond", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Queens", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Halifax", value: randValue(), params: [randParam(), randParam(), randParam()]}]
         },
         {
             name: "Index 1",
             params: ["X", "Y", "Z"],
             data: [
-                { name: "Halifax", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Victoria", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Annapolis", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Lunenburg", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Colchester", value: randValue(), params: [randParam(), randParam(), randParam()] },]
+                { name: "Lunenburg", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Cumberland", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Pictou", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Kings", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Inverness", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Colchester", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Annapolis", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Guysborough", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Hants", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Cape", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Victoria", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Antigonish", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Yarmouth", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Digby", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Shelburne", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Richmond", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Queens", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Halifax", value: randValue(), params: [randParam(), randParam(), randParam()]}]
         },
         {
             name: "Index 2",
             params: ["X", "Y", "Z"],
             data: [
-                { name: "Halifax", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Victoria", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Annapolis", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Lunenburg", value: randValue(), params: [randParam(), randParam(), randParam()] },
-                { name: "Colchester", value: randValue(), params: [randParam(), randParam(), randParam()] },]
+                { name: "Lunenburg", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Cumberland", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Pictou", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Kings", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Inverness", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Colchester", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Annapolis", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Guysborough", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Hants", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Cape", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Victoria", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Antigonish", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Yarmouth", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Digby", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Shelburne", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Richmond", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Queens", value: randValue(), params: [randParam(), randParam(), randParam()]},
+                { name: "Halifax", value: randValue(), params: [randParam(), randParam(), randParam()]}]
         },
     ],
 
@@ -164,7 +203,7 @@ function mapClick(d) {
 
 // Update map colors using given data and variable
 function updateMap(data, tooltipHtml) {
-    tooltipHtml = tooltipHtml || (d => { let name = countyName(d); return `${name} - ${fetchDatasetValue(data, name)}`; });
+    tooltipHtml = tooltipHtml || (d => { let name = countyName(d); return `${name} - ${fetchDatasetValue(data, name).toFixed(2)}`; });
 
     theMap.elements.attr('fill', function (d) {
         return mapColorScale(fetchDatasetValue(data, countyName(d)));
@@ -202,21 +241,21 @@ function updateMap(data, tooltipHtml) {
     const rankScale = d3.scaleLinear().domain([0, 1]).range([0, 100]);
     const rankYScale = d3.scaleBand()
         .domain(data.map(function (d) { return d.name }))
-        .range([0, 150])
+        .range([0, 200])
         .padding(0.1)
 
-    rects.attr("x", 100)
+    rects.attr("x", 60)
         .attr("y", (d, i) => rankYScale(d.name))
         .attr("width", d => rankScale(d.value))
         .attr("height", rankYScale.bandwidth())
-        .attr("fill", "#147FC4")
+        //.attr("fill", "#147FC4")
         .classed("selectFocus", true);
 
     let rankTexts = rankingG.selectAll("text").data(data);
     rankTexts.exit().remove();
     rankTexts = rankTexts.enter().append("text").merge(rankTexts);
     rankTexts.attr("x", 0)
-        .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth()/2)
+        .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth()*0.5)
         .text(d => d.name)
         .classed("selectFocus", true);
 }

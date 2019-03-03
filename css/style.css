@@ -4,12 +4,13 @@ div.tooltip {
     text-align: center;			
     width: auto;					
     height: 28px;					
-    padding: 2px;				
+    padding: 5px;				
     font: 12px sans-serif;		
-    background: lightsteelblue;	
+    background: #fffef2;/*lightsteelblue;	*/
     border: 0px;		
     border-radius: 8px;			
-    pointer-events: none;			
+    pointer-events: none;
+    border: 1px solid black;
 }
 
 
@@ -40,12 +41,22 @@ path.focus {
     stroke-width: 0.03;
 }
 
+.ranking text {
+    font: 9px Arial;
+    dominant-baseline: central;
+}
+
 .ranking text.focus {
     stroke: black;
-    stroke-width: 1;
+    stroke-width: 0.5;
+}
+
+.ranking rect {
+    fill: #147FC4
 }
 
 .ranking rect.focus {
     stroke: black;
-    stroke-width: 2;
+    stroke-width: 1.5;
+    fill: #fff8b0
 }
