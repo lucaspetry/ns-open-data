@@ -237,39 +237,48 @@ function updateMap(data, tooltipHtml) {
     data.sort((a, b) => b.value - a.value);
 
     const rankingG = d3.select("#county-ranking");
-    let rects = rankingG.selectAll("rect").data(data);
-
-    rects.exit().remove();
-    rects = rects.enter().append("rect").merge(rects);
+    let rects = rankingG.selectAll("rect").data(data, d => d.name);
 
     const rankScale = d3.scaleLinear().domain([0, 1]).range([0, 100]);
     const rankYScale = d3.scaleBand()
         .domain(data.map(function (d) { return d.name }))
         .range([0, 350])
-        .padding(0.1)
+        .padding(0.1);
 
-    rects.attr("x", 120)
+    rects.exit().remove();
+    rects = rects.enter().append("rect")
+        .classed("selectFocus", true)
+        .attr("y", (d, i) => rankYScale(d.name))
+        .merge(rects);
+
+    rects.transition().duration(800)
+        .attr("x", 120)
         .attr("y", (d, i) => rankYScale(d.name))
         .attr("width", d => rankScale(d.value))
-        .attr("height", rankYScale.bandwidth())
-        //.attr("fill", "#147FC4")
-        .classed("selectFocus", true);
+        .attr("height", rankYScale.bandwidth());
 
-    let rankTexts = rankingG.selectAll("text").data(data);
+    let rankTexts = rankingG.selectAll("text.name").data(data, d => d.name);
     rankTexts.exit().remove();
-    rankTexts = rankTexts.enter().append("text").merge(rankTexts);
-    rankTexts.attr("x", 0)
+    rankTexts = rankTexts.enter().append("text")
+        .attr("class", "name")
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5)
+        .classed("selectFocus", true).merge(rankTexts);
+    rankTexts.transition().duration(800)
         .text((d, i) => (i + 1) + '. ' + d.name)
-        .classed("selectFocus", true);
+        .attr("x", 0)
+        .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5);
 
-    rankTexts = rankingG.selectAll("text.v").data(data);
+    rankTexts = rankingG.selectAll("text.v").data(data, d => d.name);
     rankTexts.exit().remove();
-    rankTexts = rankTexts.enter().append("text").attr("class", "v").merge(rankTexts);
-    rankTexts.attr("x", d => rankScale(d.value) + 10 + 120)
+    rankTexts = rankTexts.enter().append("text")
+        .attr("class", "v")
+        .attr("x", d => rankScale(d.value) + 10 + 120)
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5)
+        .classed("selectFocus", true).merge(rankTexts);
+    rankTexts.transition().duration(800)
         .text(d => d.value.toFixed(2))
-        .classed("selectFocus", true);
+        .attr("x", d => rankScale(d.value) + 10 + 120)
+        .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5);
 }
 
 // Generate map
