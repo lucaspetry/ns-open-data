@@ -251,7 +251,7 @@ function updateMap(data, tooltipHtml) {
         .attr("y", (d, i) => rankYScale(d.name))
         .merge(rects);
 
-    rects.transition().duration(800)
+    rects.transition().duration(800).delay((d,i) => i * 60)
         .attr("x", 120)
         .attr("y", (d, i) => rankYScale(d.name))
         .attr("width", d => rankScale(d.value))
@@ -263,19 +263,19 @@ function updateMap(data, tooltipHtml) {
         .attr("class", "name")
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5)
         .classed("selectFocus", true).merge(rankTexts);
-    rankTexts.transition().duration(800)
+    rankTexts.transition().duration(800).delay((d,i) => i * 60)
         .text((d, i) => (i + 1) + '. ' + d.name)
         .attr("x", 0)
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5);
 
-    rankTexts = rankingG.selectAll("text.v").data(data, d => d.name);
+    rankTexts = rankingG.selectAll("text.v").data(data, (d,i) => d.name);
     rankTexts.exit().remove();
     rankTexts = rankTexts.enter().append("text")
         .attr("class", "v")
         .attr("x", d => rankScale(d.value) + 10 + 120)
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5)
         .classed("selectFocus", true).merge(rankTexts);
-    rankTexts.transition().duration(800)
+    rankTexts.transition().duration(800).delay((d,i) => i * 60)
         .text(d => d.value.toFixed(2))
         .attr("x", d => rankScale(d.value) + 10 + 120)
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5);
