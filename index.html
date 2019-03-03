@@ -197,10 +197,21 @@
                 function createIndex(obj) {
                   $('#create-index').collapse('toggle');
                   $('#select-index').collapse('toggle');
+                  d3.select("#create-alert").classed("show", true);
+                  window.setTimeout(function() {
+                    d3.select("#create-alert").classed("show", false);
+                  }, 3000);
                 }
               </script>
             </div>
+            <div id="create-alert" class="alert alert-success alert-dismissible fade" role="alert">
+              <strong>Index created!</strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
           </div>
+          
           <div class="col-6" id="main-view">
             <div class="p-3">
               <div class="row" id="index-label" style="visibility: hidden">
