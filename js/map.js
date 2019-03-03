@@ -164,7 +164,6 @@ function registerPieChart(selector) {
         const self = d3.select(this);
         let index = self.attr("index");
         d3.select("#map-index-name").text(theMap.indexData[index].name);
-        console.log(d3.select("#map-index-name"))
         updateMap(theMap.indexData[index].data);
         d3.selectAll(".pie").classed("unfocus", true)
         self.classed("unfocus", false);
@@ -234,9 +233,6 @@ function updateMap(data, tooltipHtml) {
         d3.select(this).classed("focus", d => countyName(d) == theMap.selected);
     }).on("click", mapClick);
 
-
-    const values = Object.keys(data).map(k => data[k].value)
-    console.log(max)
     verticalLegend("#map-legend", theMap.colors, max);
 
     // Do the ranking
@@ -332,7 +328,6 @@ d3.json('data/map10.geojson').then(function (geojson) {
 
     d3.csv('data/proc/crime_stats_by_offence_category.csv')
         .then((data) => {
-            console.log('Crime data loaded!');
             data.forEach((row) => {
                 if (!(row.YEAR in criminality_idx)) {
                     criminality_idx[row.YEAR] = {
@@ -353,7 +348,6 @@ d3.json('data/map10.geojson').then(function (geojson) {
                 criminality_idx[row.YEAR].data.push(d);
             });
             theMap.indexData[0] = criminality_idx['2010'];
-            console.log(criminality_idx)
 
         })
         .catch((err) => {
