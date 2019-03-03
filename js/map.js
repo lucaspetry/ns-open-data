@@ -207,9 +207,12 @@ function updateMap(data, tooltipHtml) {
         .interpolate(d3.interpolateHcl)
         .range(theMap.colors);
 
-    theMap.elements.attr('fill', function (d) {
-        return mapColorScale(fetchDatasetValue(data, countyName(d)));
-    }).on("mouseover", function (d) {
+    theMap.elements.transition().duration(800)
+        .attr('fill', function (d) {
+            return mapColorScale(fetchDatasetValue(data, countyName(d)));
+        });
+
+    theMap.elements.on("mouseover", function (d) {
         theMap.tooltip.transition()
             .duration(200)
             .style("opacity", .9);
@@ -372,10 +375,10 @@ function verticalLegend(selector, colors, max) {
     if (rect.empty()) {
         rect = legendSvg.append("rect");
         text = legendSvg.append("text")
-                .attr("class", "map-legend-text")
-                .attr("x", 52)
-                .attr("y", 40)
-                .text("Index Intensity");
+            .attr("class", "map-legend-text")
+            .attr("x", 52)
+            .attr("y", 40)
+            .text("Index Intensity");
     }
 
     rect.attr('x1', 0)
