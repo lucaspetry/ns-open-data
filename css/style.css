@@ -30,3 +30,22 @@ div.tooltip {
 .pie.unfocus {
     opacity: 0.4
 }
+
+.ranking text {
+    text-align: start
+}
+
+path.focus {
+    stroke: black;
+    stroke-width: 0.03;
+}
+
+.ranking text.focus {
+    stroke: black;
+    stroke-width: 1;
+}
+
+.ranking rect.focus {
+    stroke: black;
+    stroke-width: 2;
+}

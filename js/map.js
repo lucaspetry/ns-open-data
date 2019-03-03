@@ -61,6 +61,13 @@ function countyName(d) {
 // ========== MAIN CODE ==========
 
 
+function randParam() {
+    return Math.floor(Math.random() * 500);
+}
+function randValue() {
+    return Math.random();
+}
+
 const datasets = {
     test: {}
 };
@@ -68,28 +75,38 @@ const datasets = {
 const theMap = {
     elements: null,
     colors: ['#D2E5F6', '#147FC4'],
+    selected: "Halifax",
 
     indexData: [
         {
             name: "Index 0",
             params: ["X", "Y", "Z"],
             data: [
-                { name: "Halifax", value: 1.0, params: [10, 30, 50] },
-                { name: "Victoria", value: 0.1, params: [40, 30, 10] },]
+                { name: "Halifax", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Victoria", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Annapolis", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Lunenburg", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Colchester", value: randValue(), params: [randParam(), randParam(), randParam()] },]
         },
         {
             name: "Index 1",
             params: ["X", "Y", "Z"],
             data: [
-                { name: "Halifax", value: 0.5, params: [30, 55, 111] },
-                { name: "Victoria", value: 0.7, params: [10, 55, 10] },]
+                { name: "Halifax", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Victoria", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Annapolis", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Lunenburg", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Colchester", value: randValue(), params: [randParam(), randParam(), randParam()] },]
         },
         {
             name: "Index 2",
             params: ["X", "Y", "Z"],
             data: [
-                { name: "Halifax", value: 0.4, params: [3, 5, 8] },
-                { name: "Victoria", value: 0.8, params: [12, 5, 9] },]
+                { name: "Halifax", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Victoria", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Annapolis", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Lunenburg", value: randValue(), params: [randParam(), randParam(), randParam()] },
+                { name: "Colchester", value: randValue(), params: [randParam(), randParam(), randParam()] },]
         },
     ],
 
@@ -109,7 +126,7 @@ const mapColorScale = d3.scaleLinear()
     .range(theMap.colors);
 
 function registerPieChart(selector) {
-    d3.select(selector).on("click", function(d) {
+    d3.select(selector).on("click", function (d) {
         const self = d3.select(this);
         let index = self.attr("index");
         d3.select("#map-index-name").text(theMap.indexData[index].name);
@@ -132,11 +149,22 @@ function fetchDatasetValue(data, name) {
     return data[idx].value;
 }
 
+function mapClick(d) {
+    
+    const name = countyName(d)
+    d3.select("#map-county-name").text(name);
+    theMap.selected = name;
+    pieChart("#pie0", theMap.getIndexParamsForCounty(0, name), theMap.getIndexParamNames(0));
+    pieChart("#pie1", theMap.getIndexParamsForCounty(1, name), theMap.getIndexParamNames(1));
+    pieChart("#pie2", theMap.getIndexParamsForCounty(2, name), theMap.getIndexParamNames(2));
+    d3.selectAll(".selectFocus").classed("focus", d => theMap.selected == d.name)
+    d3.selectAll(".selectFocusMap").classed("focus", d => theMap.selected == countyName(d))
+
+}
+
 // Update map colors using given data and variable
 function updateMap(data, tooltipHtml) {
-    console.log(data)
-
-    tooltipHtml = tooltipHtml || (d => { let name = countyName(d); return  `${name} - ${fetchDatasetValue(data, name)}`;});
+    tooltipHtml = tooltipHtml || (d => { let name = countyName(d); return `${name} - ${fetchDatasetValue(data, name)}`; });
 
     theMap.elements.attr('fill', function (d) {
         return mapColorScale(fetchDatasetValue(data, countyName(d)));
@@ -148,26 +176,49 @@ function updateMap(data, tooltipHtml) {
             .style("left", (d3.event.pageX) + "px")
             .style("top", (d3.event.pageY - 28) + "px");
 
-        d3.select(this).attr("stroke", 'black').attr("stroke-width", 0.03);
+        d3.select(this).classed("focus", true);
     }).on("mouseout", function (d) {
         theMap.tooltip.transition()
             .duration(500)
             .style("opacity", 0);
-
-        d3.select(this).attr("stroke", 'black').attr("stroke-width", 0.0);
-    }).on("click", function (d) {
-        const name = countyName(d)
-        d3.select("#map-county-name").text(name);
-        pieChart("#pie0", theMap.getIndexParamsForCounty(0, name), theMap.getIndexParamNames(0));
-        pieChart("#pie1", theMap.getIndexParamsForCounty(1, name), theMap.getIndexParamNames(1));
-        pieChart("#pie2", theMap.getIndexParamsForCounty(2, name), theMap.getIndexParamNames(2));
-    });
+        d3.select(this).classed("focus", d => countyName(d) == theMap.selected);
+    }).on("click", mapClick);
 
 
     const values = Object.keys(data).map(k => data[k].value)
     max = d3.max(values);
     min = d3.min(values);
     verticalLegend("#map-legend", theMap.colors);
+
+    // Do the ranking
+    data.sort((a,b) => b.value - a.value);
+
+    const rankingG = d3.select("#county-ranking");
+    let rects = rankingG.selectAll("rect").data(data);
+
+    rects.exit().remove();
+    rects = rects.enter().append("rect").merge(rects);
+
+    const rankScale = d3.scaleLinear().domain([0, 1]).range([0, 100]);
+    const rankYScale = d3.scaleBand()
+        .domain(data.map(function (d) { return d.name }))
+        .range([0, 150])
+        .padding(0.1)
+
+    rects.attr("x", 100)
+        .attr("y", (d, i) => rankYScale(d.name))
+        .attr("width", d => rankScale(d.value))
+        .attr("height", rankYScale.bandwidth())
+        .attr("fill", "#147FC4")
+        .classed("selectFocus", true);
+
+    let rankTexts = rankingG.selectAll("text").data(data);
+    rankTexts.exit().remove();
+    rankTexts = rankTexts.enter().append("text").merge(rankTexts);
+    rankTexts.attr("x", 0)
+        .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth()/2)
+        .text(d => d.name)
+        .classed("selectFocus", true);
 }
 
 // Generate map
@@ -192,7 +243,7 @@ d3.json('data/map10.geojson').then(function (geojson) {
         .append('path')
         .attr('d', geoGenerator)
         .attr('fill', 'gray')
-        .merge(mapElements)
+        .attr("class", "selectFocusMap")
         .on("mouseover", function (d) {
             theMap.tooltip.transition()
                 .duration(200)
@@ -205,12 +256,7 @@ d3.json('data/map10.geojson').then(function (geojson) {
             theMap.tooltip.transition()
                 .duration(500)
                 .style("opacity", 0);
-        }).on("click", function (d) {
-            const name = countyName(d)
-            pieChart("#pie0", theMap.getIndexParamsForCounty(0, name), theMap.getIndexParamNames(0));
-            pieChart("#pie1", theMap.getIndexParamsForCounty(1, name), theMap.getIndexParamNames(1));
-            pieChart("#pie2", theMap.getIndexParamsForCounty(2, name), theMap.getIndexParamNames(2));
-        });;
+            }).on("click", mapClick);
 
     theMap.elements = mapElements;
 
