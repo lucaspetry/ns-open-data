@@ -76,6 +76,7 @@ const theMap = {
     elements: null,
     colors: ['#D2E5F6', '#147FC4'],
     selected: "Halifax",
+    selectedYear: 2010,
 
     indexData: [
         {
@@ -251,7 +252,7 @@ function updateMap(data, tooltipHtml) {
         .attr("y", (d, i) => rankYScale(d.name))
         .merge(rects);
 
-    rects.transition().duration(800).delay((d,i) => i * 60)
+    rects.transition().duration(800).delay((d, i) => i * 60)
         .attr("x", 120)
         .attr("y", (d, i) => rankYScale(d.name))
         .attr("width", d => rankScale(d.value))
@@ -263,19 +264,19 @@ function updateMap(data, tooltipHtml) {
         .attr("class", "name")
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5)
         .classed("selectFocus", true).merge(rankTexts);
-    rankTexts.transition().duration(800).delay((d,i) => i * 60)
+    rankTexts.transition().duration(800).delay((d, i) => i * 60)
         .text((d, i) => (i + 1) + '. ' + d.name)
         .attr("x", 0)
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5);
 
-    rankTexts = rankingG.selectAll("text.v").data(data, (d,i) => d.name);
+    rankTexts = rankingG.selectAll("text.v").data(data, (d, i) => d.name);
     rankTexts.exit().remove();
     rankTexts = rankTexts.enter().append("text")
         .attr("class", "v")
         .attr("x", d => rankScale(d.value) + 10 + 120)
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5)
         .classed("selectFocus", true).merge(rankTexts);
-    rankTexts.transition().duration(800).delay((d,i) => i * 60)
+    rankTexts.transition().duration(800).delay((d, i) => i * 60)
         .text(d => d.value.toFixed(2))
         .attr("x", d => rankScale(d.value) + 10 + 120)
         .attr("y", (d, i) => rankYScale(d.name) + rankYScale.bandwidth() * 0.5);
@@ -323,6 +324,37 @@ d3.json('data/map10.geojson').then(function (geojson) {
     verticalLegend("#map-legend", ['gray'], 1.0);
 
     //updateMap(theMap.indexData[0].data);
+
+    d3.csv('data/proc/crime_stats_by_offence_category.csv')
+    .then((data) => {
+        console.log('Crime data loaded!');
+        data.forEach((row) => {
+            if (!(row.YEAR in criminality_idx)) {
+                criminality_idx[row.YEAR] = {
+                    name: 'Criminality',
+                    params: ['Rate Other Criminal Code',
+                        'Rate Property Crime',
+                        'Rate Violent Criminal Code'],
+                    data: []
+                }
+            }
+            var d = {
+                name: row.CO_DESC,
+                params: [row[criminality_idx[row.YEAR].params[0]],
+                row[criminality_idx[row.YEAR].params[1]],
+                row[criminality_idx[row.YEAR].params[2]]]
+            };
+            d.value = d.params[0] * 0.2 + d.params[1] * 0.3 + d.params[2] * 0.5;
+            criminality_idx[row.YEAR].data.push(d);
+        });
+        theMap.indexData[0] = criminality_idx['2010'];
+        console.log(criminality_idx)
+        
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
 });
 
 function linspace(start, end, n) {
@@ -565,3 +597,7 @@ var dataset = [
     { "x": "2008", "y": 0.7851309848693752 },
     { "x": "2009", "y": 0.18692547440127383 },
     { "x": "2010", "y": 0.21738601041445615 }]
+
+
+var crime_data;
+var criminality_idx = {}
