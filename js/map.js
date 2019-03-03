@@ -372,8 +372,9 @@ function verticalLegend(selector, colors, max) {
     if (rect.empty()) {
         rect = legendSvg.append("rect");
         text = legendSvg.append("text")
-                .attr("x", 50)
-                .attr("y", 44)
+                .attr("class", "map-legend-text")
+                .attr("x", 52)
+                .attr("y", 40)
                 .text("Index Intensity");
     }
 

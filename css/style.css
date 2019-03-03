@@ -91,3 +91,8 @@ path.focus {
   fill: none;
   stroke: steelblue;
 }
+
+.map-legend-text {
+    font-size: 12px;
+    fill: #6c757d;
+}
