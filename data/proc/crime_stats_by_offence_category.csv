@@ -1,385 +1,145 @@
-Total other Criminal Code violations,Total property crime violations,Total violent Criminal Code violations,"Total, all Criminal Code violations (excluding traffic)",Rate Total other Criminal Code violations,Rate Total property crime violations,Rate Total violent Criminal Code violations,"Rate Total, all Criminal Code violations (excluding traffic)",geography,year
-242.0,555.0,316.0,1113.0,2454.86,5629.95,3205.52,11290.32,"Amherst, Nova Scotia, municipal",2010
-289.0,553.0,235.0,1077.0,2916.54,5580.79,2371.58,10868.91,"Amherst, Nova Scotia, municipal",2011
-218.0,650.0,256.0,1124.0,2236.59,6668.72,2626.45,11531.75,"Amherst, Nova Scotia, municipal",2012
-227.0,486.0,217.0,930.0,2368.28,5070.42,2263.95,9702.66,"Amherst, Nova Scotia, municipal",2013
-190.0,461.0,198.0,849.0,1999.79,4852.12,2083.99,8935.9,"Amherst, Nova Scotia, municipal",2014
-182.0,561.0,173.0,916.0,1930.83,5951.62,1835.35,9717.8,"Amherst, Nova Scotia, municipal",2015
-199.0,582.0,184.0,965.0,2131.53,6233.93,1970.87,10336.33,"Amherst, Nova Scotia, municipal",2016
-204.0,660.0,242.0,1106.0,2202.55,7125.89,2612.83,11941.27,"Amherst, Nova Scotia, municipal",2017
-168.0,841.0,320.0,1329.0,809.87,4054.18,1542.61,6406.67,"Annapolis County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-174.0,752.0,310.0,1236.0,843.55,3645.71,1502.88,5992.15,"Annapolis County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-198.0,808.0,322.0,1328.0,960.23,3918.53,1561.59,6440.35,"Annapolis County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-196.0,744.0,312.0,1252.0,953.96,3621.14,1518.54,6093.64,"Annapolis County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-174.0,555.0,254.0,983.0,845.4,2696.53,1234.09,4776.02,"Annapolis County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-157.0,539.0,222.0,918.0,764.36,2624.15,1080.82,4469.33,"Annapolis County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-153.0,576.0,251.0,980.0,742.07,2793.68,1217.38,4753.13,"Annapolis County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-137.0,474.0,204.0,815.0,662.54,2292.29,986.56,3941.39,"Annapolis County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-6.0,33.0,11.0,50.0,,,,,"Annapolis Royal, Nova Scotia, municipal",2010
-21.0,21.0,21.0,63.0,,,,,"Annapolis Royal, Nova Scotia, municipal",2011
-25.0,22.0,13.0,60.0,,,,,"Annapolis Royal, Nova Scotia, municipal",2012
-25.0,25.0,14.0,64.0,,,,,"Annapolis Royal, Nova Scotia, municipal",2013
-20.0,15.0,11.0,46.0,,,,,"Annapolis Royal, Nova Scotia, municipal",2014
-15.0,18.0,9.0,42.0,,,,,"Annapolis Royal, Nova Scotia, municipal",2015
-19.0,33.0,10.0,62.0,,,,,"Annapolis Royal, Nova Scotia, municipal",2016
-11.0,49.0,11.0,71.0,,,,,"Annapolis Royal, Nova Scotia, municipal",2017
-76.0,306.0,136.0,518.0,494.76,1992.06,885.36,3372.18,"Antigonish County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-63.0,229.0,81.0,373.0,409.06,1486.92,525.94,2421.92,"Antigonish County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-83.0,304.0,145.0,532.0,543.62,1991.09,949.7,3484.41,"Antigonish County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-93.0,240.0,127.0,460.0,615.69,1588.88,840.78,3045.35,"Antigonish County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-108.0,261.0,140.0,509.0,719.71,1739.3,932.96,3391.98,"Antigonish County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-75.0,254.0,119.0,448.0,501.37,1697.97,795.51,2994.85,"Antigonish County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-60.0,298.0,138.0,496.0,400.67,1989.98,921.54,3312.19,"Antigonish County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-71.0,246.0,100.0,417.0,473.74,1641.42,667.24,2782.41,"Antigonish County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-116.0,276.0,111.0,503.0,2529.99,6019.63,2420.94,10970.56,"Antigonish, Nova Scotia, Royal Canadian Mounted Police, municipal",2010
-147.0,254.0,94.0,495.0,3164.01,5467.07,2023.25,10654.33,"Antigonish, Nova Scotia, Royal Canadian Mounted Police, municipal",2011
-193.0,300.0,144.0,637.0,4171.17,6483.68,3112.17,13767.02,"Antigonish, Nova Scotia, Royal Canadian Mounted Police, municipal",2012
-128.0,204.0,118.0,450.0,2792.32,4450.26,2574.17,9816.75,"Antigonish, Nova Scotia, Royal Canadian Mounted Police, municipal",2013
-149.0,245.0,96.0,490.0,3270.41,5377.52,2107.11,10755.05,"Antigonish, Nova Scotia, Royal Canadian Mounted Police, municipal",2014
-81.0,234.0,91.0,406.0,1785.71,5158.73,2006.17,8950.62,"Antigonish, Nova Scotia, Royal Canadian Mounted Police, municipal",2015
-124.0,331.0,109.0,564.0,2721.09,7263.55,2391.92,12376.56,"Antigonish, Nova Scotia, Royal Canadian Mounted Police, municipal",2016
-103.0,301.0,118.0,522.0,2260.26,6605.22,2589.42,11454.9,"Antigonish, Nova Scotia, Royal Canadian Mounted Police, municipal",2017
-94.0,207.0,151.0,452.0,1171.63,2580.08,1882.09,5633.8,"Barrington, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-70.0,222.0,136.0,428.0,876.2,2778.82,1702.34,5357.37,"Barrington, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-64.0,191.0,131.0,386.0,814.46,2430.64,1667.09,4912.19,"Barrington, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-54.0,184.0,90.0,328.0,700.48,2386.82,1167.47,4254.77,"Barrington, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-52.0,145.0,94.0,291.0,683.04,1904.64,1234.73,3822.41,"Barrington, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-39.0,123.0,85.0,247.0,520.83,1642.63,1135.15,3298.61,"Barrington, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-46.0,121.0,117.0,284.0,614.73,1617.0,1563.54,3795.27,"Barrington, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-60.0,122.0,97.0,279.0,798.4,1623.42,1290.75,3712.57,"Barrington, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-123.0,420.0,218.0,761.0,1474.82,5035.97,2613.91,9124.7,"Bridgewater, Nova Scotia, municipal",2010
-107.0,502.0,177.0,786.0,1270.03,5958.46,2100.89,9329.38,"Bridgewater, Nova Scotia, municipal",2011
-102.0,441.0,138.0,681.0,1213.71,5247.5,1642.08,8103.28,"Bridgewater, Nova Scotia, municipal",2012
-87.0,356.0,111.0,554.0,1041.92,4263.47,1329.34,6634.73,"Bridgewater, Nova Scotia, municipal",2013
-67.0,309.0,114.0,490.0,809.18,3731.88,1376.81,5917.87,"Bridgewater, Nova Scotia, municipal",2014
-102.0,303.0,130.0,535.0,1236.81,3674.06,1576.33,6487.21,"Bridgewater, Nova Scotia, municipal",2015
-73.0,281.0,102.0,456.0,883.03,3399.06,1233.82,5515.91,"Bridgewater, Nova Scotia, municipal",2016
-75.0,215.0,107.0,397.0,905.25,2595.05,1291.49,4791.79,"Bridgewater, Nova Scotia, municipal",2017
-1.0,10.0,0.0,11.0,0.0,0.0,0.0,0.0,"Canadian National Railway Police, Nova Scotia",2010
-,1.0,0.0,1.0,,0.0,0.0,0.0,"Canadian National Railway Police, Nova Scotia",2011
-,2.0,0.0,2.0,,0.0,0.0,0.0,"Canadian National Railway Police, Nova Scotia",2012
-,1.0,0.0,1.0,,0.0,0.0,0.0,"Canadian National Railway Police, Nova Scotia",2013
-,10.0,0.0,10.0,,0.0,0.0,0.0,"Canadian National Railway Police, Nova Scotia",2014
-,2.0,0.0,3.0,,0.0,0.0,0.0,"Canadian National Railway Police, Nova Scotia",2015
-,4.0,0.0,4.0,,0.0,0.0,0.0,"Canadian National Railway Police, Nova Scotia",2016
-1.0,20.0,1.0,22.0,0.0,0.0,0.0,0.0,"Canadian National Railway Police, Nova Scotia",2017
-1180.0,4054.0,1228.0,6462.0,1164.98,4002.41,1212.37,6379.76,"Cape Breton Region, Nova Scotia, municipal",2010
-1222.0,3953.0,1215.0,6390.0,1219.68,3945.5,1212.7,6377.88,"Cape Breton Region, Nova Scotia, municipal",2011
-1060.0,4375.0,1119.0,6554.0,1068.34,4409.44,1127.81,6605.59,"Cape Breton Region, Nova Scotia, municipal",2012
-767.0,3643.0,859.0,5269.0,782.16,3715.0,875.98,5373.13,"Cape Breton Region, Nova Scotia, municipal",2013
-758.0,3691.0,934.0,5383.0,780.74,3801.74,962.02,5544.51,"Cape Breton Region, Nova Scotia, municipal",2014
-816.0,3115.0,896.0,4827.0,849.74,3243.81,933.05,5026.61,"Cape Breton Region, Nova Scotia, municipal",2015
-720.0,2655.0,741.0,4116.0,754.31,2781.53,776.31,4312.16,"Cape Breton Region, Nova Scotia, municipal",2016
-906.0,2802.0,925.0,4633.0,956.31,2957.6,976.37,4890.28,"Cape Breton Region, Nova Scotia, municipal",2017
-264.0,1403.0,321.0,1988.0,680.18,3614.77,827.04,5122.0,"Colchester County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-268.0,1641.0,362.0,2271.0,689.3,4220.68,931.07,5841.05,"Colchester County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-286.0,1415.0,345.0,2046.0,737.87,3650.67,890.09,5278.64,"Colchester County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-290.0,1276.0,357.0,1923.0,751.16,3305.1,924.7,4980.96,"Colchester County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-225.0,1197.0,348.0,1770.0,585.37,3114.19,905.38,4604.94,"Colchester County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-198.0,970.0,308.0,1476.0,518.66,2540.93,806.81,3866.4,"Colchester County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-247.0,993.0,350.0,1590.0,645.62,2595.54,914.84,4155.99,"Colchester County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-197.0,936.0,310.0,1443.0,514.33,2443.74,809.36,3767.43,"Colchester County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-31.0,200.0,80.0,311.0,197.28,1272.75,509.1,1979.13,"Cumberland County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-52.0,279.0,72.0,403.0,334.19,1793.06,462.72,2589.97,"Cumberland County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-73.0,327.0,106.0,506.0,474.46,2125.31,688.94,3288.7,"Cumberland County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-104.0,362.0,140.0,606.0,635.77,2212.98,855.85,3704.61,"Cumberland County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-97.0,442.0,137.0,676.0,597.36,2722.01,843.7,4163.07,"Cumberland County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-152.0,470.0,220.0,842.0,764.43,2363.71,1106.42,4234.56,"Cumberland County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-144.0,446.0,259.0,849.0,728.86,2257.43,1310.93,4297.21,"Cumberland County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-139.0,438.0,203.0,780.0,709.29,2235.04,1035.87,3980.2,"Cumberland County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-56.0,101.0,65.0,222.0,2581.83,4656.52,2996.77,10235.13,"Digby, Nova Scotia, Royal Canadian Mounted Police, municipal",2010
-54.0,65.0,62.0,181.0,2468.01,2970.75,2833.64,8272.39,"Digby, Nova Scotia, Royal Canadian Mounted Police, municipal",2011
-31.0,69.0,73.0,173.0,1447.25,3221.29,3408.03,8076.56,"Digby, Nova Scotia, Royal Canadian Mounted Police, municipal",2012
-,,,,,,,,"Digby, Nova Scotia, Royal Canadian Mounted Police, municipal",2013
-,,,,,,,,"Digby, Nova Scotia, Royal Canadian Mounted Police, municipal",2014
-,,,,,,,,"Digby, Nova Scotia, Royal Canadian Mounted Police, municipal",2015
-,,,,,,,,"Digby, Nova Scotia, Royal Canadian Mounted Police, municipal",2016
-,,,,,,,,"Digby, Nova Scotia, Royal Canadian Mounted Police, municipal",2017
-42.0,184.0,94.0,320.0,539.43,2363.22,1207.3,4109.94,"Digby, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-51.0,281.0,89.0,421.0,662.42,3649.82,1155.99,5468.24,"Digby, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-58.0,287.0,106.0,451.0,768.01,3800.32,1403.6,5971.93,"Digby, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-101.0,377.0,143.0,621.0,1055.38,3939.39,1494.25,6489.03,"Digby, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-95.0,310.0,145.0,550.0,1002.22,3270.39,1529.7,5802.3,"Digby, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-112.0,309.0,196.0,617.0,1188.2,3278.17,2079.35,6545.72,"Digby, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-116.0,292.0,173.0,581.0,1229.2,3094.2,1833.21,6156.62,"Digby, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-119.0,327.0,137.0,583.0,1261.93,3467.66,1452.81,6182.4,"Digby, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-109.0,537.0,155.0,801.0,644.63,3175.82,916.67,4737.12,"Enfield (East Hants), Nova Scotia, Royal Canadian Mounted Police, rural",2010
-96.0,498.0,161.0,755.0,564.64,2929.07,946.95,4440.65,"Enfield (East Hants), Nova Scotia, Royal Canadian Mounted Police, rural",2011
-131.0,544.0,217.0,892.0,769.73,3196.43,1275.05,5241.2,"Enfield (East Hants), Nova Scotia, Royal Canadian Mounted Police, rural",2012
-146.0,639.0,246.0,1031.0,648.37,2837.73,1092.46,4578.56,"Enfield (East Hants), Nova Scotia, Royal Canadian Mounted Police, rural",2013
-177.0,634.0,225.0,1036.0,791.45,2834.91,1006.08,4632.45,"Enfield (East Hants), Nova Scotia, Royal Canadian Mounted Police, rural",2014
-116.0,544.0,193.0,853.0,520.86,2442.64,866.6,3830.09,"Enfield (East Hants), Nova Scotia, Royal Canadian Mounted Police, rural",2015
-121.0,524.0,172.0,817.0,545.76,2363.45,775.79,3684.99,"Enfield (East Hants), Nova Scotia, Royal Canadian Mounted Police, rural",2016
-105.0,483.0,164.0,752.0,475.33,2186.51,742.42,3404.26,"Enfield (East Hants), Nova Scotia, Royal Canadian Mounted Police, rural",2017
-312.0,296.0,241.0,849.0,9363.75,8883.55,7232.89,25480.19,"Eskasoni, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-252.0,406.0,239.0,897.0,7420.49,11955.24,7037.69,26413.43,"Eskasoni, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-290.0,489.0,236.0,1015.0,8706.09,14680.28,7084.96,30471.33,"Eskasoni, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-234.0,458.0,201.0,893.0,7188.94,14070.66,6175.12,27434.72,"Eskasoni, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-198.0,439.0,168.0,805.0,6203.01,13753.13,5263.16,25219.3,"Eskasoni, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-152.0,403.0,190.0,745.0,4833.07,12813.99,6041.34,23688.39,"Eskasoni, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-189.0,382.0,189.0,760.0,6079.13,12286.91,6079.13,24445.16,"Eskasoni, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-183.0,342.0,179.0,704.0,5933.85,11089.49,5804.15,22827.5,"Eskasoni, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-26.0,168.0,98.0,292.0,344.01,2222.81,1296.64,3863.46,"Guysborough County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-28.0,117.0,94.0,239.0,376.09,1571.52,1262.59,3210.21,"Guysborough County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-36.0,129.0,53.0,218.0,488.53,1750.58,719.23,2958.34,"Guysborough County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-45.0,123.0,70.0,238.0,628.58,1718.12,977.79,3324.49,"Guysborough County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-33.0,90.0,62.0,185.0,473.12,1290.32,888.89,2652.33,"Guysborough County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-23.0,131.0,58.0,212.0,337.1,1919.98,850.07,3107.14,"Guysborough County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-28.0,133.0,66.0,227.0,415.74,1974.76,979.96,3370.45,"Guysborough County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-26.0,140.0,65.0,231.0,391.57,2108.43,978.92,3478.92,"Guysborough County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 1), Nova Scotia, Royal Canadian Mounted Police",2010
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 1), Nova Scotia, Royal Canadian Mounted Police",2011
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 1), Nova Scotia, Royal Canadian Mounted Police",2012
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 1), Nova Scotia, Royal Canadian Mounted Police",2013
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 1), Nova Scotia, Royal Canadian Mounted Police",2014
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 1), Nova Scotia, Royal Canadian Mounted Police",2015
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 1), Nova Scotia, Royal Canadian Mounted Police",2016
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 1), Nova Scotia, Royal Canadian Mounted Police",2017
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 2), Nova Scotia, Royal Canadian Mounted Police",2010
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 2), Nova Scotia, Royal Canadian Mounted Police",2011
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 2), Nova Scotia, Royal Canadian Mounted Police",2012
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 2), Nova Scotia, Royal Canadian Mounted Police",2013
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 2), Nova Scotia, Royal Canadian Mounted Police",2014
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 2), Nova Scotia, Royal Canadian Mounted Police",2015
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 2), Nova Scotia, Royal Canadian Mounted Police",2016
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (Division Headquarters 2), Nova Scotia, Royal Canadian Mounted Police",2017
-0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,"Halifax (offshore), Nova Scotia, Royal Canadian Mounted Police, rural",2010
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (offshore), Nova Scotia, Royal Canadian Mounted Police, rural",2011
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (offshore), Nova Scotia, Royal Canadian Mounted Police, rural",2012
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (offshore), Nova Scotia, Royal Canadian Mounted Police, rural",2013
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (offshore), Nova Scotia, Royal Canadian Mounted Police, rural",2014
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (offshore), Nova Scotia, Royal Canadian Mounted Police, rural",2015
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (offshore), Nova Scotia, Royal Canadian Mounted Police, rural",2016
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Halifax (offshore), Nova Scotia, Royal Canadian Mounted Police, rural",2017
-3764.0,19619.0,6240.0,29623.0,945.13,4926.3,1566.85,7438.29,"Halifax Metropolitain Area, Nova Scotia, municipal",2010
-3665.0,17263.0,5567.0,26495.0,910.69,4289.57,1383.31,6583.57,"Halifax Metropolitain Area, Nova Scotia, municipal",2011
-3702.0,15574.0,4744.0,24020.0,910.04,3828.47,1166.19,5904.71,"Halifax Metropolitain Area, Nova Scotia, municipal",2012
-3343.0,13888.0,4535.0,21766.0,815.18,3386.57,1105.85,5307.6,"Halifax Metropolitain Area, Nova Scotia, municipal",2013
-3411.0,13579.0,4885.0,21875.0,824.71,3283.12,1181.09,5288.93,"Halifax Metropolitain Area, Nova Scotia, municipal",2014
-3301.0,12263.0,4640.0,20204.0,791.89,2941.8,1113.1,4846.79,"Halifax Metropolitain Area, Nova Scotia, municipal",2015
-3502.0,12040.0,4355.0,19897.0,824.05,2833.11,1024.77,4681.92,"Halifax Metropolitain Area, Nova Scotia, municipal",2016
-3829.0,12317.0,5411.0,21557.0,886.92,2853.0,1253.36,4993.27,"Halifax Metropolitain Area, Nova Scotia, municipal",2017
-157.0,262.0,146.0,565.0,14233.91,23753.4,13236.63,51223.93,"Indian Brook, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-94.0,243.0,126.0,463.0,8430.49,21793.72,11300.45,41524.66,"Indian Brook, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-107.0,231.0,127.0,465.0,9639.64,20810.81,11441.44,41891.89,"Indian Brook, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-95.0,191.0,107.0,393.0,8675.8,17442.92,9771.69,35890.41,"Indian Brook, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-66.0,122.0,115.0,303.0,6116.77,11306.77,10658.02,28081.56,"Indian Brook, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-63.0,122.0,88.0,273.0,5904.4,11433.93,8247.42,25585.75,"Indian Brook, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-51.0,85.0,78.0,214.0,4834.12,8056.87,7393.36,20284.36,"Indian Brook, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-78.0,138.0,87.0,303.0,7421.5,13130.35,8277.83,28829.69,"Indian Brook, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-108.0,343.0,182.0,633.0,684.41,2173.64,1153.36,4011.41,"Inverness County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-170.0,563.0,190.0,923.0,1087.44,3601.36,1215.38,5904.18,"Inverness County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-224.0,634.0,228.0,1086.0,1457.1,4124.11,1483.12,7064.33,"Inverness County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-222.0,547.0,262.0,1031.0,1207.77,2975.9,1425.38,5609.05,"Inverness County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-193.0,565.0,273.0,1031.0,1066.65,3122.58,1508.79,5698.02,"Inverness County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-228.0,549.0,247.0,1024.0,1272.32,3063.62,1378.35,5714.29,"Inverness County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-155.0,353.0,209.0,717.0,870.1,1981.59,1173.23,4024.92,"Inverness County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-220.0,474.0,216.0,910.0,1242.31,2676.61,1219.72,5138.63,"Inverness County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-101.0,315.0,120.0,536.0,1635.89,5102.04,1943.63,8681.57,"Kentville, Nova Scotia, municipal",2010
-99.0,269.0,99.0,467.0,1588.58,4316.43,1588.58,7493.58,"Kentville, Nova Scotia, municipal",2011
-90.0,318.0,112.0,520.0,1451.38,5128.21,1806.16,8385.74,"Kentville, Nova Scotia, municipal",2012
-93.0,311.0,93.0,497.0,1506.07,5036.44,1506.07,8048.58,"Kentville, Nova Scotia, municipal",2013
-101.0,296.0,108.0,505.0,1640.41,4807.54,1754.1,8202.05,"Kentville, Nova Scotia, municipal",2014
-62.0,235.0,120.0,417.0,1008.29,3821.76,1951.54,6781.59,"Kentville, Nova Scotia, municipal",2015
-71.0,240.0,97.0,408.0,1151.29,3891.68,1572.89,6615.86,"Kentville, Nova Scotia, municipal",2016
-110.0,208.0,117.0,435.0,1777.06,3360.26,1890.15,7027.46,"Kentville, Nova Scotia, municipal",2017
-556.0,2577.0,783.0,3916.0,999.01,4630.31,1406.88,7036.21,"Kings County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-458.0,2186.0,808.0,3452.0,821.89,3922.84,1449.98,6194.71,"Kings County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-619.0,2663.0,942.0,4224.0,1116.52,4803.39,1699.13,7619.05,"Kings County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-547.0,2316.0,794.0,3657.0,992.72,4203.19,1440.99,6636.9,"Kings County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-487.0,2020.0,832.0,3339.0,887.18,3679.89,1515.68,6082.74,"Kings County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-464.0,1468.0,708.0,2640.0,848.12,2683.29,1294.12,4825.53,"Kings County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-602.0,1667.0,766.0,3035.0,1098.18,3040.97,1397.35,5536.5,"Kings County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-487.0,1779.0,712.0,2978.0,887.54,3242.15,1297.59,5427.27,"Kings County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-182.0,1190.0,432.0,1804.0,458.21,2995.97,1087.61,4541.79,"Lunenburg County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-210.0,1351.0,513.0,2074.0,527.74,3395.15,1289.2,5212.1,"Lunenburg County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-223.0,1202.0,476.0,1901.0,562.51,3031.98,1200.69,4795.18,"Lunenburg County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-209.0,1121.0,440.0,1770.0,530.52,2845.54,1116.89,4492.96,"Lunenburg County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-243.0,960.0,396.0,1599.0,621.23,2454.24,1012.37,4087.84,"Lunenburg County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-215.0,926.0,391.0,1532.0,552.36,2378.99,1004.52,3935.88,"Lunenburg County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-179.0,843.0,354.0,1376.0,459.99,2166.32,909.7,3536.0,"Lunenburg County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-156.0,723.0,332.0,1211.0,401.38,1860.24,854.22,3115.83,"Lunenburg County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-24.0,100.0,73.0,197.0,281.72,1173.85,856.91,2312.48,"Meteghan (Clare), Nova Scotia, Royal Canadian Mounted Police, rural",2010
-14.0,98.0,58.0,170.0,165.5,1158.53,685.66,2009.69,"Meteghan (Clare), Nova Scotia, Royal Canadian Mounted Police, rural",2011
-17.0,108.0,36.0,161.0,205.02,1302.46,434.15,1941.63,"Meteghan (Clare), Nova Scotia, Royal Canadian Mounted Police, rural",2012
-26.0,123.0,63.0,212.0,317.62,1502.57,769.61,2589.79,"Meteghan (Clare), Nova Scotia, Royal Canadian Mounted Police, rural",2013
-31.0,115.0,52.0,198.0,380.13,1410.18,637.65,2427.96,"Meteghan (Clare), Nova Scotia, Royal Canadian Mounted Police, rural",2014
-38.0,154.0,63.0,255.0,470.59,1907.12,780.19,3157.89,"Meteghan (Clare), Nova Scotia, Royal Canadian Mounted Police, rural",2015
-30.0,110.0,63.0,203.0,371.7,1362.9,780.57,2515.18,"Meteghan (Clare), Nova Scotia, Royal Canadian Mounted Police, rural",2016
-38.0,87.0,61.0,186.0,470.94,1078.2,755.98,2305.12,"Meteghan (Clare), Nova Scotia, Royal Canadian Mounted Police, rural",2017
-57.0,105.0,76.0,238.0,,,,,"Millbrook, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-67.0,158.0,63.0,288.0,,,,,"Millbrook, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-42.0,141.0,70.0,253.0,,,,,"Millbrook, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-52.0,131.0,81.0,264.0,,,,,"Millbrook, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-29.0,107.0,67.0,203.0,,,,,"Millbrook, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-37.0,84.0,66.0,187.0,,,,,"Millbrook, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-63.0,103.0,63.0,229.0,,,,,"Millbrook, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-52.0,99.0,69.0,220.0,,,,,"Millbrook, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-299.0,899.0,387.0,1585.0,3080.57,9262.31,3987.22,16330.11,"New Glasgow Region, Nova Scotia, municipal",2010
-194.0,799.0,388.0,1381.0,1559.86,6424.38,3119.72,11103.96,"New Glasgow Region, Nova Scotia, municipal",2011
-207.0,811.0,348.0,1366.0,1673.4,6556.18,2813.26,11042.85,"New Glasgow Region, Nova Scotia, municipal",2012
-171.0,692.0,292.0,1155.0,1395.58,5647.6,2383.09,9426.26,"New Glasgow Region, Nova Scotia, municipal",2013
-141.0,508.0,279.0,928.0,1162.79,4189.35,2300.84,7652.98,"New Glasgow Region, Nova Scotia, municipal",2014
-103.0,543.0,210.0,856.0,856.83,4517.1,1746.94,7120.87,"New Glasgow Region, Nova Scotia, municipal",2015
-145.0,562.0,298.0,1005.0,1208.64,4684.5,2483.95,8377.09,"New Glasgow Region, Nova Scotia, municipal",2016
-142.0,551.0,333.0,1026.0,1185.11,4598.56,2779.17,8562.84,"New Glasgow Region, Nova Scotia, municipal",2017
-10179.0,40847.0,14766.0,65792.0,1080.49,4335.86,1567.39,6983.75,Nova Scotia,2010
-9693.0,38026.0,13777.0,61496.0,1026.29,4026.18,1458.7,6511.17,Nova Scotia,2011
-9787.0,37336.0,12966.0,60089.0,1035.72,3951.14,1372.15,6359.01,Nova Scotia,2012
-8831.0,32763.0,11622.0,53216.0,936.43,3474.16,1232.39,5642.97,Nova Scotia,2013
-8539.0,31281.0,11844.0,51664.0,906.27,3319.96,1257.05,5483.28,Nova Scotia,2014
-8132.0,27818.0,11293.0,47243.0,863.69,2954.51,1199.41,5017.6,Nova Scotia,2015
-8423.0,26991.0,10977.0,46391.0,887.92,2845.3,1157.16,4890.38,Nova Scotia,2016
-8742.0,27353.0,11937.0,48032.0,916.48,2867.58,1251.43,5035.49,Nova Scotia,2017
-23.0,177.0,54.0,254.0,1940.93,14936.71,4556.96,21434.6,"Oxford County, Nova Scotia, Royal Canadian Mounted Police, municipal",2010
-18.0,43.0,34.0,95.0,1534.53,3665.81,2898.55,8098.89,"Oxford County, Nova Scotia, Royal Canadian Mounted Police, municipal",2011
-26.0,32.0,47.0,105.0,2258.91,2780.19,4083.41,9122.5,"Oxford County, Nova Scotia, Royal Canadian Mounted Police, municipal",2012
-,,,,,,,,"Oxford County, Nova Scotia, Royal Canadian Mounted Police, municipal",2013
-,,,,,,,,"Oxford County, Nova Scotia, Royal Canadian Mounted Police, municipal",2014
-,,,,,,,,"Oxford County, Nova Scotia, Royal Canadian Mounted Police, municipal",2015
-,,,,,,,,"Oxford County, Nova Scotia, Royal Canadian Mounted Police, municipal",2016
-,,,,,,,,"Oxford County, Nova Scotia, Royal Canadian Mounted Police, municipal",2017
-26.0,104.0,38.0,168.0,1941.75,7766.99,2837.94,12546.68,"Parrsboro, Nova Scotia, Royal Canadian Mounted Police, municipal",2010
-32.0,87.0,55.0,174.0,2413.27,6561.09,4147.81,13122.17,"Parrsboro, Nova Scotia, Royal Canadian Mounted Police, municipal",2011
-38.0,80.0,44.0,162.0,2898.55,6102.21,3356.22,12356.98,"Parrsboro, Nova Scotia, Royal Canadian Mounted Police, municipal",2012
-25.0,77.0,39.0,141.0,1930.5,5945.95,3011.58,10888.03,"Parrsboro, Nova Scotia, Royal Canadian Mounted Police, municipal",2013
-37.0,110.0,44.0,191.0,2888.37,8587.04,3434.82,14910.23,"Parrsboro, Nova Scotia, Royal Canadian Mounted Police, municipal",2014
-24.0,48.0,34.0,106.0,1885.31,3770.62,2670.86,8326.79,"Parrsboro, Nova Scotia, Royal Canadian Mounted Police, municipal",2015
-29.0,56.0,40.0,125.0,2283.46,4409.45,3149.61,9842.52,"Parrsboro, Nova Scotia, Royal Canadian Mounted Police, municipal",2016
-13.0,83.0,32.0,128.0,1032.57,6592.53,2541.7,10166.8,"Parrsboro, Nova Scotia, Royal Canadian Mounted Police, municipal",2017
-108.0,492.0,270.0,870.0,485.79,2213.03,1214.47,3913.28,"Pictou County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-114.0,445.0,233.0,792.0,514.02,2006.49,1050.59,3571.11,"Pictou County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-117.0,540.0,219.0,876.0,529.72,2444.88,991.53,3966.13,"Pictou County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-128.0,495.0,231.0,854.0,583.46,2256.36,1052.97,3892.79,"Pictou County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-113.0,456.0,235.0,804.0,519.23,2095.3,1079.81,3694.34,"Pictou County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-120.0,354.0,262.0,736.0,557.13,1643.53,1216.4,3417.06,"Pictou County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-124.0,357.0,259.0,740.0,576.8,1660.62,1204.76,3442.18,"Pictou County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-99.0,390.0,250.0,739.0,462.36,1821.41,1167.57,3451.34,"Pictou County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-70.0,213.0,80.0,363.0,1965.19,5979.79,2245.93,10190.9,"Pictou, Nova Scotia, Royal Canadian Mounted Police, municipal",2010
-52.0,168.0,76.0,296.0,1484.02,4794.52,2168.95,8447.49,"Pictou, Nova Scotia, Royal Canadian Mounted Police, municipal",2011
-70.0,184.0,100.0,354.0,2004.01,5267.68,2862.87,10134.55,"Pictou, Nova Scotia, Royal Canadian Mounted Police, municipal",2012
-46.0,194.0,74.0,314.0,1327.56,5598.85,2135.64,9062.05,"Pictou, Nova Scotia, Royal Canadian Mounted Police, municipal",2013
-50.0,180.0,68.0,298.0,1456.03,5241.7,1980.2,8677.93,"Pictou, Nova Scotia, Royal Canadian Mounted Police, municipal",2014
-42.0,130.0,56.0,228.0,1232.76,3815.67,1643.67,6692.1,"Pictou, Nova Scotia, Royal Canadian Mounted Police, municipal",2015
-44.0,186.0,63.0,293.0,1292.22,5462.56,1850.22,8604.99,"Pictou, Nova Scotia, Royal Canadian Mounted Police, municipal",2016
-33.0,127.0,59.0,219.0,975.18,3752.96,1743.5,6471.63,"Pictou, Nova Scotia, Royal Canadian Mounted Police, municipal",2017
-86.0,303.0,110.0,499.0,2477.67,8729.47,3169.12,14376.26,"Port Hawkesbury, Nova Scotia, Royal Canadian Mounted Police, municipal",2010
-72.0,131.0,144.0,347.0,2095.46,3812.57,4190.92,10098.95,"Port Hawkesbury, Nova Scotia, Royal Canadian Mounted Police, municipal",2011
-62.0,82.0,89.0,233.0,1849.09,2445.57,2654.34,6949.0,"Port Hawkesbury, Nova Scotia, Royal Canadian Mounted Police, municipal",2012
-,,,,,,,,"Port Hawkesbury, Nova Scotia, Royal Canadian Mounted Police, municipal",2013
-,,,,,,,,"Port Hawkesbury, Nova Scotia, Royal Canadian Mounted Police, municipal",2014
-,,,,,,,,"Port Hawkesbury, Nova Scotia, Royal Canadian Mounted Police, municipal",2015
-,,,,,,,,"Port Hawkesbury, Nova Scotia, Royal Canadian Mounted Police, municipal",2016
-,,,,,,,,"Port Hawkesbury, Nova Scotia, Royal Canadian Mounted Police, municipal",2017
-97.0,320.0,166.0,583.0,862.99,2846.98,1476.87,5186.83,"Queens County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-100.0,355.0,164.0,619.0,897.67,3186.71,1472.17,5556.55,"Queens County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-89.0,423.0,189.0,701.0,802.52,3814.25,1704.24,6321.01,"Queens County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-93.0,365.0,161.0,619.0,855.17,3356.32,1480.46,5691.95,"Queens County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-110.0,331.0,150.0,591.0,1028.04,3093.46,1401.87,5523.36,"Queens County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-93.0,288.0,132.0,513.0,875.46,2711.1,1242.59,4829.14,"Queens County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-74.0,220.0,122.0,416.0,701.55,2085.7,1156.62,3943.88,"Queens County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-78.0,265.0,152.0,495.0,745.06,2531.28,1451.91,4728.25,"Queens County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-63.0,166.0,166.0,395.0,656.87,1730.79,1730.79,4118.44,"Richmond County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-58.0,206.0,108.0,372.0,614.54,2182.67,1144.31,3941.51,"Richmond County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-79.0,265.0,119.0,463.0,840.51,2819.45,1266.09,4926.06,"Richmond County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-88.0,159.0,119.0,366.0,947.26,1711.52,1280.95,3939.72,"Richmond County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-61.0,194.0,115.0,370.0,666.59,2119.99,1256.69,4043.27,"Richmond County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-61.0,179.0,92.0,332.0,677.48,1988.01,1021.77,3687.25,"Richmond County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-81.0,166.0,127.0,374.0,908.28,1861.4,1424.09,4193.77,"Richmond County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-47.0,204.0,84.0,335.0,532.46,2311.09,951.63,3795.17,"Richmond County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-64.0,107.0,83.0,254.0,3657.14,6114.29,4742.86,14514.29,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, municipal",2010
-62.0,116.0,73.0,251.0,3613.05,6759.91,4254.08,14627.04,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, municipal",2011
-50.0,113.0,91.0,254.0,2953.34,6674.54,5375.07,15002.95,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, municipal",2012
-53.0,146.0,68.0,267.0,3167.96,8726.84,4064.55,15959.35,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, municipal",2013
-22.0,84.0,53.0,159.0,1322.91,5051.11,3187.01,9561.03,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, municipal",2014
-21.0,98.0,65.0,184.0,1278.93,5968.33,3958.59,11205.85,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, municipal",2015
-38.0,89.0,79.0,206.0,2280.91,5342.14,4741.9,12364.95,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, municipal",2016
-28.0,74.0,63.0,165.0,1671.64,4417.91,3761.19,9850.75,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, municipal",2017
-49.0,127.0,85.0,261.0,948.69,2458.86,1645.69,5053.24,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-43.0,118.0,97.0,258.0,848.63,2328.79,1914.35,5091.77,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-25.0,110.0,95.0,230.0,501.91,2208.39,1907.25,4617.55,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-30.0,138.0,58.0,226.0,611.62,2813.46,1182.47,4607.54,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-21.0,85.0,72.0,178.0,430.86,1743.95,1477.23,3652.03,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-17.0,101.0,79.0,197.0,352.33,2093.26,1637.31,4082.9,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-22.0,99.0,84.0,205.0,452.95,2038.3,1729.46,4220.71,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-17.0,88.0,44.0,149.0,350.08,1812.19,906.1,3068.37,"Shelburne, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-112.0,247.0,166.0,525.0,2808.43,6193.58,4162.49,13164.49,"Springhill, Nova Scotia, municipal",2010
-98.0,263.0,147.0,508.0,2471.63,6633.04,3707.44,12812.11,"Springhill, Nova Scotia, municipal",2011
-112.0,314.0,129.0,555.0,2855.69,8006.12,3289.14,14150.94,"Springhill, Nova Scotia, municipal",2012
-98.0,213.0,173.0,484.0,2544.79,5531.03,4492.34,12568.16,"Springhill, Nova Scotia, municipal",2013
-67.0,145.0,139.0,351.0,1760.38,3809.77,3652.13,9222.28,"Springhill, Nova Scotia, municipal",2014
-0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,"Springhill, Nova Scotia, municipal",2015
-,,,,,,,,"Springhill, Nova Scotia, municipal",2016
-,,,,,,,,"Springhill, Nova Scotia, municipal",2017
-65.0,234.0,43.0,342.0,1396.95,5029.01,924.13,7350.1,"Stellarton, Nova Scotia, municipal",2010
-54.0,171.0,70.0,295.0,1175.96,3723.87,1524.39,6424.22,"Stellarton, Nova Scotia, municipal",2011
-79.0,187.0,62.0,328.0,1727.53,4089.22,1355.78,7172.53,"Stellarton, Nova Scotia, municipal",2012
-43.0,127.0,59.0,229.0,949.86,2805.39,1303.29,5058.54,"Stellarton, Nova Scotia, municipal",2013
-29.0,142.0,63.0,234.0,647.32,3169.64,1406.25,5223.21,"Stellarton, Nova Scotia, municipal",2014
-51.0,106.0,60.0,217.0,1152.54,2395.48,1355.93,4903.95,"Stellarton, Nova Scotia, municipal",2015
-30.0,119.0,73.0,222.0,681.66,2703.93,1658.71,5044.31,"Stellarton, Nova Scotia, municipal",2016
-58.0,117.0,75.0,250.0,1322.39,2667.58,1709.99,5699.95,"Stellarton, Nova Scotia, municipal",2017
-37.0,14.0,36.0,87.0,1374.44,520.06,1337.3,3231.8,"Trenton, Nova Scotia, municipal",2010
-,,,,,,,,"Trenton, Nova Scotia, municipal",2011
-,,,,,,,,"Trenton, Nova Scotia, municipal",2012
-,,,,,,,,"Trenton, Nova Scotia, municipal",2013
-,,,,,,,,"Trenton, Nova Scotia, municipal",2014
-,,,,,,,,"Trenton, Nova Scotia, municipal",2015
-,,,,,,,,"Trenton, Nova Scotia, municipal",2016
-,,,,,,,,"Trenton, Nova Scotia, municipal",2017
-613.0,1213.0,421.0,2247.0,4983.33,9860.99,3422.49,18266.81,"Truro, Nova Scotia, municipal",2010
-483.0,1107.0,394.0,1984.0,3910.3,8962.11,3189.77,16062.18,"Truro, Nova Scotia, municipal",2011
-393.0,849.0,274.0,1516.0,3183.48,6877.28,2219.52,12280.28,"Truro, Nova Scotia, municipal",2012
-435.0,708.0,190.0,1333.0,3535.72,5754.69,1544.34,10834.76,"Truro, Nova Scotia, municipal",2013
-454.0,824.0,269.0,1547.0,3704.91,6724.33,2195.2,12624.45,"Truro, Nova Scotia, municipal",2014
-434.0,651.0,268.0,1353.0,3551.85,5327.77,2193.31,11072.92,"Truro, Nova Scotia, municipal",2015
-383.0,714.0,259.0,1356.0,3120.16,5816.7,2109.98,11046.84,"Truro, Nova Scotia, municipal",2016
-471.0,732.0,355.0,1558.0,3821.5,5939.15,2880.32,12640.97,"Truro, Nova Scotia, municipal",2017
-143.0,357.0,218.0,718.0,1949.56,4867.08,2972.05,9788.68,"Victoria County, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-129.0,332.0,205.0,666.0,1782.51,4587.54,2832.67,9202.71,"Victoria County, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-90.0,288.0,143.0,521.0,1273.71,4075.86,2023.78,7373.34,"Victoria County, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-84.0,302.0,132.0,518.0,1203.44,4326.65,1891.12,7421.2,"Victoria County, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-127.0,279.0,129.0,535.0,1836.59,4034.71,1865.51,7736.8,"Victoria County, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-108.0,209.0,91.0,408.0,1581.95,3061.37,1332.94,5976.27,"Victoria County, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-88.0,206.0,101.0,395.0,1303.7,3051.85,1496.3,5851.85,"Victoria County, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-81.0,223.0,86.0,390.0,1214.03,3342.33,1288.97,5845.32,"Victoria County, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-68.0,141.0,56.0,265.0,1768.07,3666.15,1456.06,6890.28,"Westville, Nova Scotia, municipal",2010
-44.0,118.0,61.0,223.0,1132.85,3038.11,1570.55,5741.5,"Westville, Nova Scotia, municipal",2011
-48.0,136.0,65.0,249.0,1246.43,3531.55,1687.87,6465.85,"Westville, Nova Scotia, municipal",2012
-29.0,72.0,47.0,148.0,760.36,1887.78,1232.3,3880.44,"Westville, Nova Scotia, municipal",2013
-36.0,88.0,48.0,172.0,958.72,2343.54,1278.3,4580.56,"Westville, Nova Scotia, municipal",2014
-26.0,66.0,49.0,141.0,700.62,1778.5,1320.4,3799.51,"Westville, Nova Scotia, municipal",2015
-34.0,86.0,42.0,162.0,921.91,2331.89,1138.83,4392.62,"Westville, Nova Scotia, municipal",2016
-41.0,101.0,30.0,172.0,1119.91,2758.81,819.45,4698.17,"Westville, Nova Scotia, municipal",2017
-96.0,271.0,124.0,491.0,2499.35,7055.45,3228.33,12783.13,"Windsor, Nova Scotia, Royal Canadian Mounted Police, municipal",2010
-82.0,247.0,111.0,440.0,2129.32,6413.92,2882.37,11425.6,"Windsor, Nova Scotia, Royal Canadian Mounted Police, municipal",2011
-83.0,309.0,114.0,506.0,2147.48,7994.83,2949.55,13091.85,"Windsor, Nova Scotia, Royal Canadian Mounted Police, municipal",2012
-74.0,199.0,86.0,359.0,1917.6,5156.78,2228.56,9302.93,"Windsor, Nova Scotia, Royal Canadian Mounted Police, municipal",2013
-52.0,206.0,85.0,343.0,1346.1,5332.64,2200.36,8879.11,"Windsor, Nova Scotia, Royal Canadian Mounted Police, municipal",2014
-82.0,152.0,94.0,328.0,2123.8,3936.8,2434.6,8495.21,"Windsor, Nova Scotia, Royal Canadian Mounted Police, municipal",2015
-77.0,117.0,66.0,260.0,1988.12,3020.91,1704.11,6713.14,"Windsor, Nova Scotia, Royal Canadian Mounted Police, municipal",2016
-60.0,138.0,75.0,273.0,1549.19,3563.13,1936.48,7048.8,"Windsor, Nova Scotia, Royal Canadian Mounted Police, municipal",2017
-113.0,427.0,235.0,775.0,532.29,2011.4,1106.98,3650.67,"Windsor, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-92.0,491.0,237.0,820.0,431.32,2301.92,1111.11,3844.35,"Windsor, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-98.0,549.0,211.0,858.0,458.31,2567.46,986.77,4012.53,"Windsor, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-57.0,339.0,142.0,538.0,364.1,2165.44,907.06,3436.6,"Windsor, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-54.0,315.0,127.0,496.0,346.15,2019.23,814.1,3179.49,"Windsor, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-52.0,255.0,147.0,454.0,334.17,1638.71,944.67,2917.55,"Windsor, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-59.0,268.0,94.0,421.0,378.71,1720.26,603.38,2702.36,"Windsor, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-59.0,245.0,119.0,423.0,379.37,1575.36,765.17,2719.91,"Windsor, Nova Scotia, Royal Canadian Mounted Police, rural",2017
-179.0,537.0,251.0,967.0,2555.32,7665.95,3583.15,13804.43,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, municipal",2010
-221.0,546.0,242.0,1009.0,3207.55,7924.53,3512.34,14644.41,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, municipal",2011
-181.0,413.0,298.0,892.0,2654.74,6057.49,4370.78,13083.02,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, municipal",2012
-222.0,429.0,212.0,863.0,3305.54,6387.73,3156.64,12849.91,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, municipal",2013
-180.0,467.0,202.0,849.0,2721.09,7059.71,3053.67,12834.47,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, municipal",2014
-192.0,517.0,265.0,974.0,2926.38,7879.9,4039.02,14845.3,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, municipal",2015
-208.0,355.0,275.0,838.0,3170.73,5411.59,4192.07,12774.39,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, municipal",2016
-140.0,362.0,189.0,691.0,2133.17,5515.77,2879.78,10528.72,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, municipal",2017
-73.0,395.0,180.0,648.0,384.57,2080.92,948.27,3413.76,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, rural",2010
-74.0,378.0,166.0,618.0,391.93,2002.01,879.19,3273.13,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, rural",2011
-68.0,427.0,190.0,685.0,362.9,2278.79,1013.98,3655.67,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, rural",2012
-71.0,362.0,159.0,592.0,384.43,1960.04,860.9,3205.37,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, rural",2013
-81.0,299.0,112.0,492.0,445.54,1644.66,616.06,2706.27,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, rural",2014
-77.0,344.0,176.0,597.0,426.5,1905.39,974.85,3306.75,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, rural",2015
-95.0,299.0,149.0,543.0,527.02,1658.72,826.58,3012.32,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, rural",2016
-68.0,273.0,123.0,464.0,378.01,1517.59,683.75,2579.35,"Yarmouth, Nova Scotia, Royal Canadian Mounted Police, rural",2017
+Total other Criminal Code violations,Total property crime violations,Total violent Criminal Code violations,"Total, all Criminal Code violations (excluding traffic)",Rate Total other Criminal Code violations,Rate Total property crime violations,Rate Total violent Criminal Code violations,"Rate Total, all Criminal Code violations (excluding traffic)",CO_CODE,CO_DESC,YEAR
+0.045442674327500654,0.04454638124362895,0.053044871794871794,0.04655009451795841,0.045218417682011014,0.11262840637880746,0.08343569365138861,0.08849621209243475,AP,Annapolis,2010
+0.050927135022199005,0.03939857288481142,0.053044871794871794,0.04384958142046989,0.047098912462074635,0.1012807787072311,0.08128680306415681,0.08277039043523123,AP,Annapolis,2011
+0.058239749281796815,0.042303771661569824,0.05368589743589743,0.04685390224142587,0.05361364319063237,0.10885993943227693,0.08446227163642914,0.08896143855536685,AP,Annapolis,2012
+0.05771741969182554,0.039194699286442404,0.052243589743589745,0.0444234404536862,0.053263562956932874,0.10059820419284661,0.08213381103284673,0.08417228573579474,AP,Annapolis,2013
+0.05066597022721337,0.0290519877675841,0.04246794871794872,0.03473534971644612,0.04720220567297481,0.07491178898140825,0.06674866309581955,0.06597181981867495,AP,Annapolis,2014
+0.04492034473752938,0.028389398572884812,0.03701923076923077,0.032406157169862275,0.04267740469386684,0.07290101391624142,0.05845869429881425,0.06173546875226621,AP,Annapolis,2015
+0.04492034473752938,0.031039755351681957,0.041826923076923074,0.03517418309478801,0.041432861087939934,0.07761069472306283,0.06584486340509105,0.06565563710678314,AP,Annapolis,2016
+0.03865238965787412,0.026656472986748215,0.03445512820512821,0.02990818255468539,0.036992369702593716,0.06368167413831566,0.05336042028037803,0.05444296106698197,AP,Annapolis,2017
+0.0501436406372421,0.02966360856269113,0.03958333333333333,0.03446529840669727,0.16888439982177733,0.22257124180500817,0.1788290195963894,0.1981182363110083,AT,Antigonish,2010
+0.054844606946983544,0.024617737003058103,0.028044871794871796,0.02930056710775047,0.19949939084922655,0.19318747852196086,0.13787894276530255,0.18062403610201552,AT,Antigonish,2011
+0.07208148341603551,0.030784913353720692,0.046314102564102566,0.03946124763705104,0.2632463772000058,0.23543597953887746,0.2196958019018196,0.23829637052911912,AT,Antigonish,2012
+0.05771741969182554,0.022629969418960245,0.03926282051282051,0.030718336483931945,0.19028340307020924,0.16777220402116122,0.18470561064352595,0.17766595275768923,AT,Antigonish,2013
+0.06711935231130843,0.025790010193679918,0.03782051282051282,0.03372265730488793,0.222785030636208,0.19771102789832337,0.16442934325511765,0.19541486721776477,AT,Antigonish,2014
+0.040741708017759205,0.024872579001019367,0.03365384615384615,0.028827977315689982,0.12769720907327564,0.190484683466834,0.15153545885818354,0.16500441675063904,AT,Antigonish,2015
+0.04805432227735701,0.032059123343527014,0.03958333333333333,0.03578179854172293,0.17430087246471002,0.2570705635365194,0.17921628505333828,0.2167108571949524,AT,Antigonish,2016
+0.045442674327500654,0.027879714576962283,0.03493589743589744,0.03169727248177154,0.15265061546003447,0.22909834323580322,0.17614412332782187,0.19666191724963858,AT,Antigonish,2017
+0.4121180464873335,0.2371559633027523,0.2530448717948718,0.26363759114231705,0.7262015233794411,0.6004941650574632,0.6281910862958331,0.6386671151331896,CB,Cape Breton,2010
+0.4037607730477932,0.22884811416921508,0.25608974358974357,0.25769646232784227,0.5994149695871287,0.5476517297582765,0.6729175422057149,0.5924490485165725,CB,Cape Breton,2011
+0.36876469051971794,0.2520897043832824,0.23141025641025642,0.26336753983256816,0.6489895690607241,0.5982678109026902,0.5877732290312794,0.6081360759777801,CB,Cape Breton,2012
+0.26142595978062155,0.20902140672782873,0.16987179487179488,0.20800702133405347,0.4450597369764011,0.4941000503666095,0.38137534406318274,0.45317933527039556,CB,Cape Breton,2013
+0.24967354400626796,0.21049949031600407,0.1766025641025641,0.20888468809073724,0.3899318711481403,0.487688517107562,0.33670351638116663,0.42494473018453655,CB,Cape Breton,2014
+0.2528075215460956,0.17930682976554535,0.17403846153846153,0.1880907372400756,0.31729496855977996,0.44609869910798594,0.37722630311310595,0.3966442364339452,CB,Cape Breton,2015
+0.23739879864194308,0.15479102956167176,0.14903846153846154,0.16459627329192547,0.38153943734792173,0.41861347641561986,0.3707926123164479,0.3972288084028076,CB,Cape Breton,2016
+0.2844084617393575,0.1602446483180428,0.17692307692307693,0.1801579800162031,0.3847063513599528,0.39023954559483853,0.36674038773060824,0.38286949969507494,CB,Cape Breton,2017
+0.24392791851658396,0.13868501529051988,0.1310897435897436,0.15099243856332703,0.31621736911633497,0.37436753512258425,0.2298458348139747,0.32307284288868615,CO,Colchester,2010
+0.21363280229825019,0.14811416921508663,0.13125,0.15335538752362948,0.2568148393818488,0.3662285910656358,0.22288533318621578,0.3025523224373004,CO,Colchester,2011
+0.1882998171846435,0.12257900101936799,0.11041666666666666,0.12878071833648394,0.2189453148991244,0.2924749840746504,0.16819057787470235,0.24254377210533623,CO,Colchester,2012
+0.20292504570383912,0.10779816513761468,0.10064102564102564,0.11882257628949501,0.2393543783479563,0.25168830930709934,0.1335438413163564,0.21846471123291228,CO,Colchester,2013
+0.18490467484983025,0.10846075433231396,0.10961538461538461,0.11882257628949501,0.23954421451934038,0.27332205988042585,0.1677021690651704,0.23799192898389868,CO,Colchester,2014
+0.17471924784539045,0.08690112130479102,0.10288461538461538,0.10180934377531731,0.22727353940608078,0.2185988637092883,0.16226855344993488,0.2063588777378501,CO,Colchester,2015
+0.1809872029250457,0.09225280326197757,0.1076923076923077,0.10717661355657575,0.21025919337494095,0.23369884545729575,0.16360451110169993,0.20999877753735244,CO,Colchester,2016
+0.18803865238965786,0.0900611620795107,0.11762820512820513,0.10872940858763165,0.24208746087420674,0.23288347866864353,0.19956502949653873,0.2266514814244383,CO,Colchester,2017
+0.113345521023766,0.06539245667686035,0.10480769230769231,0.0800364569268161,0.5216725906718972,0.9945524608658668,0.8260226160863365,0.8345237264805438,CU,Cumberland,2010
+0.12770958474797597,0.06243628950050968,0.08701923076923077,0.07618822576289495,0.539925338550478,0.6732343280808155,0.7349443792691827,0.6560142054303586,CU,Cumberland,2011
+0.12196395925829198,0.07150866462793068,0.09326923076923077,0.08277072643802322,0.5987767850462699,0.713482055124351,0.7596114580814891,0.696884792219336,CU,Cumberland,2012
+0.11856881692347872,0.05800203873598369,0.09118589743589743,0.07294761004590872,0.4176027264940944,0.5211785619930175,0.5746089078627329,0.5092000328752667,CU,Cumberland,2013
+0.10211543483938365,0.05902140672782875,0.08301282051282051,0.0697745071563597,0.40456879830353465,0.5548088999715803,0.5416653820920015,0.514283543649859,CU,Cumberland,2014
+0.09349699660485766,0.05499490316004078,0.06842948717948719,0.06292195517148258,0.25575231516377833,0.3357574868589821,0.3035723074909364,0.30774495699625043,CU,Cumberland,2015
+0.09715330373465657,0.05524974515800204,0.07740384615384616,0.06545368620037807,0.2872025853453176,0.35839495811626104,0.34785795146309,0.3380911763751151,CU,Cumberland,2016
+0.0929746670148864,0.06019367991845056,0.0764423076923077,0.06798541722927356,0.22023285081445299,0.4432000493387195,0.334822358197831,0.3603608543977921,CU,Cumberland,2017
+0.03186210498824758,0.01962283384301733,0.03717948717948718,0.02494598973805023,0.19000255720489687,0.2276245712379157,0.2737350184789446,0.2300930245728805,DI,Digby,2010
+0.031078610603290677,0.022629969418960245,0.03349358974358974,0.026059951390764245,0.1840255095147006,0.21610970308703142,0.2528740667903104,0.21756133205607855,DI,Digby,2011
+0.02768346826847741,0.023649337410805302,0.03445512820512821,0.02649878476910613,0.13513432025808786,0.23124941139407718,0.28373036155773745,0.22087372237113553,DI,Digby,2012
+0.03316792896317576,0.0254841997961264,0.033012820512820513,0.028119092627599245,0.0766603127383421,0.15118205959706157,0.1224461979564716,0.1254069868229577,DI,Digby,2013
+0.03290676416819013,0.02166156982670744,0.03157051282051282,0.02524979746151769,0.07718236220964836,0.13003002827808702,0.11722622739080982,0.1136857110692266,DI,Digby,2014
+0.039174719247845394,0.02359836901121305,0.041506410256410255,0.029435592762624897,0.09261715962653641,0.14405155896185334,0.15466495317928175,0.13403729685191695,DI,Digby,2015
+0.03813006006790284,0.020489296636085626,0.03782051282051282,0.026465028355387523,0.08938491963788192,0.12382185055201861,0.14137244498099102,0.11978476369520757,DI,Digby,2016
+0.04100287281274484,0.02110091743119266,0.03173076923076923,0.025958682149608427,0.09675335479598754,0.12628767529344176,0.11946760735393307,0.11723927876085108,DI,Digby,2017
+0.0067902846696265345,0.00856269113149847,0.015705128205128205,0.009856872805833108,0.019207512152306677,0.06175146342364597,0.07013182710869018,0.053366503280274764,GU,Guysborough,2010
+0.007312614259597806,0.005963302752293578,0.015064102564102564,0.008067782878746961,0.020998672263483672,0.04365809934251156,0.06829015269401,0.044343071364883,GU,Guysborough,2011
+0.009401932619482894,0.006574923547400612,0.008493589743589743,0.007358898190656224,0.027276666119491817,0.048632531273552916,0.03890124784935158,0.04086395648309237,GU,Guysborough,2012
+0.011752415774353616,0.006269113149847095,0.011217948717948718,0.008034026465028356,0.035096241355474934,0.047730766164195144,0.05288607418296996,0.04592163669100771,GU,Guysborough,2013
+0.008618438234525986,0.0045871559633027525,0.009935897435897435,0.006244936537942209,0.026416261589777435,0.03584613542533949,0.04807770838370219,0.03663699835002075,GU,Guysborough,2014
+0.006006790284669626,0.006676860346585117,0.009294871794871795,0.007156359708344585,0.01882169805105253,0.053338600575007215,0.045978037288903824,0.04291935130744797,GU,Guysborough,2015
+0.007312614259597806,0.0067787971457696225,0.010576923076923078,0.0076627059141236836,0.02321249702683055,0.05486043337508789,0.053003443741849725,0.04655648847949819,GU,Guysborough,2016
+0.0067902846696265345,0.007135575942915392,0.010416666666666666,0.0077977315689981095,0.02186298518496185,0.05857389431679624,0.052947192893354346,0.04805479947813967,GU,Guysborough,2017
+0.12405327761817707,0.07629969418960245,0.10576923076923077,0.0888468809073724,1.0,1.0,1.0,1.0,HN,Hants,2010
+0.09506398537477148,0.0753822629969419,0.10176282051282051,0.08364839319470699,0.6452068041750557,0.9289522439532981,0.8784262310687501,0.8458510515596067,HN,Hants,2011
+0.10942804909898146,0.08323139653414882,0.10721153846153846,0.09185120172832838,0.7266906306915953,0.9603695625661357,0.9007064349348061,0.8873209903743151,HN,Hants,2012
+0.09715330373465657,0.06972477064220184,0.09310897435897436,0.07834863624088577,0.6480040959945685,0.7668301011749337,0.7572105204231147,0.7349763139228825,HN,Hants,2013
+0.09114651344998694,0.06508664627930683,0.08846153846153847,0.07352146907912503,0.4802000873246388,0.5971082398717416,0.7939244756636655,0.6184502074387888,HN,Hants,2014
+0.08174458083050405,0.054689092762487256,0.08365384615384615,0.06440723737510128,0.49598775668362904,0.540394548627114,0.675729002883397,0.5639710559521844,HN,Hants,2015
+0.08043875685557587,0.050662589194699285,0.06570512820512821,0.05779098028625439,0.43253110800673134,0.42119848083415773,0.5666537397889837,0.4611495154696777,HN,Hants,2016
+0.07887176808566206,0.051172273190621814,0.07131410256410256,0.05910748042128004,0.5485924764575231,0.5682662023937614,0.6340065586325853,0.5801885078841934,HN,Hants,2017
+0.9830242883259337,1.0,1.0,1.0,0.05277054725301476,0.1368566068462474,0.08474677112016535,0.10274612075306461,HX,Halifax,2010
+0.9571689736223558,0.8798674821610601,0.892147435897436,0.8943761814744802,0.05084761850522999,0.1191677313662297,0.07481957810781882,0.09093975607380911,HX,Halifax,2011
+0.9668320710368242,0.7937818552497452,0.7602564102564102,0.8108290575209289,0.05081132629599479,0.10635799963718261,0.0630761317373237,0.0815625697131771,HX,Halifax,2012
+0.873073909636981,0.7078491335372069,0.7267628205128205,0.7347421009991898,0.045514897114378526,0.09408165947004771,0.059812500777505724,0.07331460732358724,HX,Halifax,2013
+0.8908331156960042,0.6920998980632008,0.7828525641025641,0.7384215500945179,0.046046996735934535,0.0912077346221407,0.06388203331672852,0.07305671605093456,HX,Halifax,2014
+0.8621049882475842,0.6250254841997961,0.7435897435897436,0.6820145827707265,0.04421451934039747,0.08172558837673113,0.06020463409634365,0.06694937554259729,HX,Halifax,2015
+0.914599112039697,0.6136595310907238,0.6979166666666666,0.6716513637591143,0.046010146185018794,0.07870609208171893,0.05542709808903969,0.0646720036024662,HX,Halifax,2016
+1.0,0.6277777777777778,0.8671474358974359,0.7276870105320011,0.04952044033058294,0.07925865240288732,0.06779092641361358,0.06897272388850864,HX,Halifax,2017
+0.02820579785844868,0.01748216106014271,0.029166666666666667,0.021367809883877938,0.038213462957937885,0.060385480970561504,0.06238219098136637,0.055410156937958976,IN,Inverness,2010
+0.04439801514755811,0.028695208970438327,0.030448717948717948,0.03115716986227383,0.06071630770880025,0.10004869976083501,0.0657366886964461,0.08155524875042906,IN,Inverness,2011
+0.05850091407678245,0.032313965341488275,0.03653846153846154,0.0366594652984067,0.08135596627169575,0.11457111845820946,0.08021803694274475,0.09758055994314511,IN,Inverness,2012
+0.05797858448681118,0.027879714576962283,0.041987179487179484,0.03480286254388334,0.0674348331507556,0.08267291401533557,0.07709503310416523,0.07747857755075119,IN,Inverness,2013
+0.05040480543222774,0.028797145769622834,0.04375,0.03480286254388334,0.05955551535495456,0.08674780330186045,0.08160645932820262,0.07870753237281382,IN,Inverness,2014
+0.05954557325672499,0.02798165137614679,0.03958333333333333,0.03456656764785309,0.07103892869865071,0.08510984671382181,0.07455130483037936,0.0789322721160414,IN,Inverness,2015
+0.04048054322277357,0.01799184505606524,0.03349358974358974,0.024203348636240886,0.04858130962391221,0.05505017631091394,0.0634569067117539,0.05559677242234772,IN,Inverness,2016
+0.057456254896839906,0.024159021406727828,0.03461538461538462,0.030718336483931945,0.0693633453153458,0.07435839523592437,0.06597142781420562,0.07098060152068827,IN,Inverness,2017
+0.1715852703055628,0.1474006116207951,0.14471153846153847,0.1502835538752363,0.14711744940586863,0.27037257122791464,0.18122022153098588,0.21711185256962337,KI,Kings,2010
+0.1454687908069992,0.12512742099898064,0.1453525641025641,0.13229138536321902,0.13458658706947668,0.22889359866229841,0.1643476713500907,0.18907822863090398,KI,Kings,2011
+0.18516583964481587,0.15193679918450562,0.16891025641025642,0.1601404266810694,0.14337656014624087,0.2759078977232792,0.18959186223301808,0.22107636109474638,KI,Kings,2012
+0.167145468790807,0.13389398572884811,0.1421474358974359,0.14022414258709154,0.13951786079201883,0.2566844102703434,0.1593986784295845,0.20285255097565638,KI,Kings,2013
+0.15356489945155394,0.1180428134556575,0.15064102564102563,0.12975965433432352,0.14112588483197824,0.2357876846000133,0.17685374941653267,0.19731776500676496,KI,Kings,2014
+0.1373726821624445,0.08679918450560653,0.1326923076923077,0.10319335673778018,0.10365110791739669,0.1807155614487915,0.17554916243027466,0.1603307417585643,KI,Kings,2015
+0.17576390702533298,0.0971967380224261,0.13830128205128206,0.1162233324331623,0.12559728601275924,0.19259463602554389,0.1606524233027794,0.16786221671845442,KI,Kings,2016
+0.15591538260642465,0.10127420998980632,0.1328525641025641,0.11521064002160411,0.14877572419707674,0.18342030116065447,0.17241642286791709,0.17203889503189795,KI,Kings,2017
+0.07965526247061896,0.08205912334352701,0.10416666666666667,0.08658520118822577,0.10792912187370535,0.22313380321796242,0.20020542377171677,0.1887771022386261,LU,Lunenburg,2010
+0.08278924001044659,0.09444444444444444,0.11057692307692307,0.09654334323521468,0.10037699230270158,0.25985086705298666,0.1833609990150693,0.20086345921015097,LU,Lunenburg,2011
+0.08487855837033167,0.08374108053007136,0.0983974358974359,0.08715906022144207,0.09917376598113475,0.23001066505315718,0.1537579082472939,0.17816819842847934,LU,Lunenburg,2012
+0.07730477931574824,0.07528032619775739,0.08830128205128206,0.07844990548204159,0.08779587921506093,0.19749405976819137,0.13231010876426083,0.15370830936178467,LU,Lunenburg,2013
+0.08096108644554714,0.06467889908256881,0.08173076923076923,0.07051714825816906,0.0798657523263306,0.17185542755084096,0.12922442520016378,0.13821024561830017,LU,Lunenburg,2014
+0.08278924001044659,0.0626401630988787,0.08349358974358974,0.0697745071563597,0.09989681845743593,0.16815863509544235,0.13959134840315202,0.1439755728480686,LU,Lunenburg,2015
+0.06581352833638025,0.05728848114169215,0.07307692307692308,0.06184174993248717,0.07498640438007881,0.15461076723097827,0.11593732573730531,0.12503527529927888,LU,Lunenburg,2016
+0.0603290676416819,0.04780835881753313,0.0703525641025641,0.054280313259519306,0.07295459900458846,0.12377156728498416,0.11605577704327152,0.10922904046351363,LU,Lunenburg,2017
+0.16897362235570645,0.10158002038735983,0.13974358974358975,0.11855252497974615,0.5623064648149824,0.740923939752312,0.6038912606193758,0.6617386457738361,PI,Pictou,2010
+0.11961347610342125,0.08669724770642202,0.1326923076923077,0.10083040777747772,0.3275628720649374,0.5552653386883625,0.5102709181490659,0.48744185532534423,PI,Pictou,2011
+0.13606685818751632,0.0946992864424057,0.12724358974358974,0.10710910072913854,0.4009501858719455,0.6081083296037596,0.5252590649053661,0.5356998460525851,PI,Pictou,2012
+0.10890571950901018,0.08053007135575943,0.11266025641025641,0.09114231704023765,0.2801099709773994,0.5054990725376409,0.43850186682503456,0.43262856404840944,PI,Pictou,2013
+0.09636980934969966,0.07003058103975535,0.1110576923076923,0.08223062381852551,0.2648823183239923,0.473371954216113,0.4351544004660167,0.4120323476048365,PI,Pictou,2014
+0.08931835988508749,0.06111111111111111,0.10208333333333333,0.07352146907912503,0.25124705614348936,0.3931062474320113,0.39393659123103364,0.3582228570126189,PI,Pictou,2015
+0.09845912770958475,0.06676860346585117,0.11778846153846154,0.08175803402646503,0.26137258252010864,0.46792608193061075,0.45089760668865875,0.41247671623050536,PI,Pictou,2016
+0.09741446852964221,0.0655453618756371,0.11971153846153847,0.08121793140696733,0.2827972694858455,0.4333617531024915,0.44458074457733715,0.3989776897113537,PI,Pictou,2017
+0.025332985113606685,0.0163098878695209,0.0266025641025641,0.01967998919794761,0.048184328689047234,0.07909141192357944,0.0798799909782293,0.07164639473664217,QU,Queens,2010
+0.026116479498563595,0.018093781855249746,0.026282051282051282,0.020895220091817445,0.05012065763716501,0.08852938668026815,0.0796257804129137,0.07675338784457734,QU,Queens,2011
+0.0232436667537216,0.021559633027522937,0.03028846153846154,0.023663246016743182,0.04480803654681304,0.1059629565116414,0.09217783273052979,0.08731297875470423,QU,Queens,2012
+0.024288325933664142,0.018603465851172275,0.02580128205128205,0.020895220091817445,0.04774770549486381,0.09324128995193087,0.08007416458024699,0.07862368662964285,QU,Queens,2013
+0.028728127448419953,0.016870540265035677,0.02403846153846154,0.019950040507696463,0.05739975812638399,0.08593882609962698,0.0758234394040439,0.07629492981890286,QU,Queens,2014
+0.024288325933664142,0.014678899082568808,0.021153846153846155,0.017317040237645152,0.048880580764682435,0.07531655539063015,0.06720840560756056,0.06670557366995028,QU,Queens,2015
+0.01932619482893706,0.011213047910295617,0.01955128205128205,0.014042668106940319,0.03917046059838594,0.05794243649376168,0.06255851575645763,0.054477355778760506,QU,Queens,2016
+0.020370854008879603,0.013506625891946993,0.02435897435897436,0.016709424790710234,0.041599805250421826,0.07032101004359644,0.07852997061434042,0.06531196625174304,QU,Queens,2017
+0.016453382084095063,0.008460754332313965,0.0266025641025641,0.013333783418849582,0.036675789969726716,0.04808274903343615,0.09361385198779142,0.0568885770189454,RI,Richmond,2010
+0.015147558109166884,0.010499490316004077,0.01730769230769231,0.012557385903321632,0.034312329635994725,0.06063634168952333,0.061892700424748,0.05444461864345323,RI,Richmond,2011
+0.02063201880386524,0.013506625891946993,0.019070512820512822,0.015629219551714826,0.04692917659119004,0.07832660621006682,0.06847945843413865,0.06804434293323351,RI,Richmond,2012
+0.02298250195873596,0.008103975535168196,0.019070512820512822,0.012354847421009991,0.05288947403097009,0.04754741281478784,0.0692831965193706,0.05441989312775701,RI,Richmond,2013
+0.01593105249412379,0.009887869520897043,0.01842948717948718,0.012489873075884419,0.03721849808321301,0.0588950404863642,0.06797103730350741,0.055850243491077055,RI,Richmond,2014
+0.01593105249412379,0.009123343527013252,0.014743589743589743,0.011207129354577369,0.03782653217332266,0.055228529114428326,0.055264836026072274,0.05093249036361011,RI,Richmond,2015
+0.021154348393836512,0.008460754332313965,0.020352564102564103,0.012624898730758845,0.050713058160219496,0.05171120069496476,0.07702526041708924,0.05792912064877543,RI,Richmond,2016
+0.01227474536432489,0.010397553516819572,0.013461538461538462,0.01130839859573319,0.029729461122110445,0.06420395337602133,0.051471148993894086,0.05242320413675834,RI,Richmond,2017
+0.05406111256202664,0.022477064220183487,0.05112179487179487,0.03264245206589252,0.3225796725661049,0.3098457692742569,0.4473370361536103,0.3481094304360048,SH,Shelburne,2010
+0.04570383912248629,0.023241590214067277,0.04903846153846154,0.03162975965433432,0.2980360889728635,0.32968932441791565,0.42570912578068343,0.3463807163078589,SH,Shelburne,2011
+0.0363019065030034,0.02110091743119266,0.05080128205128205,0.029368079935187686,0.23839570568246662,0.31430014443243387,0.48404990964707467,0.3388734143381746,SH,Shelburne,2012
+0.03577957691303212,0.023853211009174313,0.03461538461538462,0.027714015662975964,0.2501404229326562,0.38690668175720294,0.34694279342795387,0.3428649966123281,SH,Shelburne,2013
+0.024810655523635414,0.01600407747196738,0.035096153846153846,0.021199027815284904,0.1360572590560229,0.24168471724829962,0.31905968052763295,0.2353132854063514,SH,Shelburne,2014
+0.02010968921389397,0.016411824668705402,0.03669871794871795,0.021199027815284904,0.12016015472764652,0.26959109702809225,0.3640646863122755,0.25674975498947783,SH,Shelburne,2015
+0.02768346826847741,0.015749235474006116,0.04487179487179487,0.02346070753443154,0.18696573680443188,0.2499561757714106,0.43458648324563076,0.28152458358571086,SH,Shelburne,2016
+0.027422303473491772,0.014475025484199796,0.032692307692307694,0.020017553335133675,0.15745905401285748,0.21817715100565147,0.32225462054746146,0.22973581684332514,SH,Shelburne,2017
+0.03734656568294594,0.01819571865443425,0.03493589743589744,0.024237105049959493,0.10885206067164037,0.1352114272474745,0.1607503214141031,0.1352123804386638,VI,Victoria,2010
+0.033690258553147036,0.01692150866462793,0.032852564102564104,0.022481771536591953,0.09952496289819533,0.12744557947575944,0.15321162596863694,0.12711829639815536,VI,Victoria,2011
+0.023504831548707233,0.014678899082568808,0.022916666666666665,0.017587091547394004,0.07111653819224598,0.11323069435079997,0.1094609059307325,0.1018489574879981,VI,Victoria,2012
+0.021937842778793418,0.015392456676860346,0.021153846153846155,0.017485822306238186,0.06719307120308116,0.12019784382017258,0.10228567750631336,0.10251005423728345,VI,Victoria,2013
+0.03316792896317576,0.014220183486238533,0.020673076923076922,0.018059681339454497,0.10254447470656353,0.1120875139980559,0.10090050036211486,0.10686948035668282,VI,Victoria,2014
+0.02820579785844868,0.010652395514780836,0.014583333333333334,0.013772616797191467,0.08832686215325586,0.08504733989016022,0.07209519807059592,0.08255103781553522,VI,Victoria,2015
+0.02298250195873596,0.010499490316004077,0.016185897435897437,0.013333783418849582,0.0727910048921898,0.08478286657404545,0.08093090827271494,0.0808324072775895,VI,Victoria,2016
+0.021154348393836512,0.011365953109072376,0.013782051282051282,0.013165001350256549,0.06778435504277455,0.0928526364128084,0.06971697710103682,0.08074220749127872,VI,Victoria,2017
+0.06581352833638025,0.04750254841997961,0.06907051282051282,0.054516608155549554,0.16414631232070254,0.27077594859661064,0.24509251912393634,0.23783722184658165,YA,Yarmouth,2010
+0.0770436145207626,0.04709480122324159,0.06538461538461539,0.054921685120172835,0.20097397122753652,0.27576732682206695,0.23752623912776577,0.24749743938968033,YA,Yarmouth,2011
+0.06503003395142334,0.04281345565749235,0.0782051282051282,0.05323386443424251,0.16848741888691235,0.23158861509048068,0.2912474220614747,0.23121382253019382,YA,Yarmouth,2012
+0.07652128493079133,0.04031600407747197,0.0594551282051282,0.04911558196057251,0.20602640509475614,0.23190781660331256,0.2172981094847044,0.22177378639502668,YA,Yarmouth,2013
+0.06816401149125098,0.03904179408766565,0.05032051282051282,0.04526735079665136,0.17680615158529953,0.24181445363341056,0.1984859867778054,0.21466637474903255,YA,Yarmouth,2014
+0.07025332985113607,0.043883792048929664,0.07067307692307692,0.053031325951930865,0.18720526538538418,0.2718432873366453,0.27118696321681296,0.25073675820862945,YA,Yarmouth,2015
+0.07913293288064768,0.03333333333333333,0.06794871794871794,0.04661760734539563,0.20646079492221742,0.19641894240121213,0.2714455007704744,0.21806399212098648,YA,Yarmouth,2016
+0.054322277357012276,0.03236493374108053,0.05,0.038988657844990546,0.14020964613420972,0.19539244145263637,0.19274190974875888,0.1810635701296432,YA,Yarmouth,2017
