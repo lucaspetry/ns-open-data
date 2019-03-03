@@ -57,7 +57,8 @@
                     <div class="col-md-auto">
                       <select class="form-control form-control-sm">
                         <option selected disabled>Select an index</option>
-                        <option>Something</option>
+                        <option>Criminality</option>
+                        <option>Healthcare</option>
                       </select>
                     </div>
                     <div class="col">
@@ -69,13 +70,13 @@
               <script type="text/javascript">
                 function addIndex(btn) {
                   btn.remove('.btn');
-                  console.log('here!')
                   $('#select-indices').append(`
                     <div class="row form-group">
                       <div class="col-md-auto">
                         <select class="form-control form-control-sm">
                           <option selected disabled>Select an index</option>
-                          <option>Something</option>
+                          <option>Criminality</option>
+                          <option>Healthcare</option>
                         </select>
                       </div>
                       <div class="col">
@@ -89,7 +90,7 @@
               </div>
               <script type="text/javascript">
                 function viewIndices(obj) {
-
+                  console.log('View indices!');
                 }
               </script>
             </div>
@@ -114,7 +115,7 @@
                 <label class="form-label">Dataset</label>
                 <select class="form-control form-control-sm">
                   <option selected disabled>Select a dataset</option>
-                  <option>Dataset 1</option>
+                  <option>Crime Statistics - Incidents and rates by offence category</option>
                   <option>Dataset 2</option>
                 </select>
               </div>
@@ -125,7 +126,9 @@
                     <div class="col-7">
                       <select class="form-control form-control-sm">
                         <option selected disabled>Select a variable</option>
-                        <option>Something</option>
+                        <option>Rate Other Criminal Code</option>
+                        <option>Rate Property Crime</option>
+                        <option>Rate Violent Criminal Code</option>
                       </select>
                     </div>
                     <div class="col-3">
@@ -140,13 +143,14 @@
               <script type="text/javascript">
                 function addVariable(btn) {
                   btn.remove('.btn');
-                  console.log('here!')
                   $('#create-variables').append(`
                     <div class="row form-group">
                       <div class="col-7">
                         <select class="form-control form-control-sm">
                           <option selected disabled>Select a variable</option>
-                          <option>Something</option>
+                          <option>Rate Other Criminal Code</option>
+                          <option>Rate Property Crime</option>
+                          <option>Rate Violent Criminal Code</option>
                         </select>
                       </div>
                       <div class="col-3">
@@ -223,7 +227,40 @@
         </div>
       </main>
     </div>
-
     <script src="js/map.js"></script>
+    <script type="text/javascript">
+      $(() => {
+        var crime_data;
+        var criminality_idx = {}
+
+        d3.csv('data/proc/crime_stats_by_offence_category.csv')
+          .then((data) => {
+            console.log('Crime data loaded!');
+            data.forEach((row) => {
+              if (!(row.YEAR in criminality_idx)) {
+                criminality_idx[row.YEAR] = {
+                  name: 'Criminality',
+                  params: ['Rate Other Criminal Code',
+                           'Rate Property Crime',
+                           'Rate Violent Criminal Code'],
+                  data: []
+                }
+              }
+
+              criminality_idx[row.YEAR].data.push({
+                name: row.CO_DESC,
+                value: 0,
+                params: [row[criminality_idx[row.YEAR].params[0]],
+                         row[criminality_idx[row.YEAR].params[1]],
+                         row[criminality_idx[row.YEAR].params[2]]]
+              });
+            });
+            theMap.indexData[0] = criminality_idx['2017'];
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      })
+    </script>
   </body>
 </html>
