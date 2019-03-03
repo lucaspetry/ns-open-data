@@ -196,8 +196,12 @@ function mapClick(d) {
     d3.selectAll(".selectFocusMap").classed("focus", d => theMap.selected == countyName(d));
     d3.selectAll("#timelapse-div").attr("hidden", null);
 
-    lineGraph(dataset);
-
+    var values = [];
+    Object.keys(criminality_idx).forEach(d => {
+        const idx = criminality_idx[d].data.findIndex(x => x.name === theMap.selected);
+        values.push({ x: d, y: criminality_idx[d].data[idx].value });
+    });
+    lineGraph(values);
 }
 
 // Update map colors using given data and variable
@@ -327,34 +331,34 @@ d3.json('data/map10.geojson').then(function (geojson) {
     //updateMap(theMap.indexData[0].data);
 
     d3.csv('data/proc/crime_stats_by_offence_category.csv')
-    .then((data) => {
-        console.log('Crime data loaded!');
-        data.forEach((row) => {
-            if (!(row.YEAR in criminality_idx)) {
-                criminality_idx[row.YEAR] = {
-                    name: 'Criminality',
-                    params: ['Rate Other Criminal Code',
-                        'Rate Property Crime',
-                        'Rate Violent Criminal Code'],
-                    data: []
+        .then((data) => {
+            console.log('Crime data loaded!');
+            data.forEach((row) => {
+                if (!(row.YEAR in criminality_idx)) {
+                    criminality_idx[row.YEAR] = {
+                        name: 'Criminality',
+                        params: ['Rate Other Criminal Code',
+                            'Rate Property Crime',
+                            'Rate Violent Criminal Code'],
+                        data: []
+                    }
                 }
-            }
-            var d = {
-                name: row.CO_DESC,
-                params: [row[criminality_idx[row.YEAR].params[0]],
-                row[criminality_idx[row.YEAR].params[1]],
-                row[criminality_idx[row.YEAR].params[2]]]
-            };
-            d.value = d.params[0] * 0.2 + d.params[1] * 0.3 + d.params[2] * 0.5;
-            criminality_idx[row.YEAR].data.push(d);
+                var d = {
+                    name: row.CO_DESC,
+                    params: [row[criminality_idx[row.YEAR].params[0]],
+                    row[criminality_idx[row.YEAR].params[1]],
+                    row[criminality_idx[row.YEAR].params[2]]]
+                };
+                d.value = d.params[0] * 0.2 + d.params[1] * 0.3 + d.params[2] * 0.5;
+                criminality_idx[row.YEAR].data.push(d);
+            });
+            theMap.indexData[0] = criminality_idx['2010'];
+            console.log(criminality_idx)
+
+        })
+        .catch((err) => {
+            console.log(err);
         });
-        theMap.indexData[0] = criminality_idx['2010'];
-        console.log(criminality_idx)
-        
-    })
-    .catch((err) => {
-        console.log(err);
-    });
 
 });
 
@@ -552,60 +556,45 @@ function lineGraph(data) {
     if (svg.select("g").empty()) {
         svg = svg.append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(xScale).tickValues(xScale.domain().filter(function (d, i) { return !(i % 2); })));
+
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(d3.axisLeft(yScale)); // Create an axis component with d3.axisLeft
+
+        svg.append("path").attr("class", "line");
     } else {
-        svg.select("g").remove();
-        svg = d3.select("#county-timelapse")
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+        svg = svg.select("g");
+        svg.select("g.x.axis")
+            .call(d3.axisBottom(xScale).tickValues(xScale.domain().filter(function (d, i) { return !(i % 2); })));
+        svg.select("g.y.axis")
+            .call(d3.axisLeft(yScale))
     }
 
-    // 3. Call the x axis in a group tag
-    svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(xScale).tickValues(xScale.domain().filter(function (d, i) { return !(i % 2); })));
-
-    // 4. Call the y axis in a group tag
-    svg.append("g")
-        .attr("class", "y axis")
-        .call(d3.axisLeft(yScale)); // Create an axis component with d3.axisLeft
-
-    // 9. Append the path, bind the data, and call the line generator 
-    svg.append("path")
-        .datum(dataset) // 10. Binds data to the line 
-        .attr("class", "line") // Assign a class for styling 
-        .attr("d", line) // 11. Calls the line generator 
-        .style("opacity", 0)
+    svg.select("path.line")
+        .datum(data)
+        .style("opacity", 0.5)
         .transition().duration(900)
+        .attr("d", line) // 11. Calls the line generator 
         .style("opacity", 1);
 
     // 12. Appends a circle for each datapoint 
     let dots = svg.selectAll(".dot")
-        .data(dataset);
+        .data(data);
     dots = dots.enter().append("circle") // Uses the enter().append() method
         .attr("class", "dot")
         .attr("cx", function (d, i) { return xScale(d.x) })
         .merge(dots); // Assign a class for styling
-        
+
     dots.transition().duration(900)
         .attr("cx", function (d, i) { return xScale(d.x) })
         .attr("cy", function (d, i) { return yScale(d.y) })
         .attr("r", 5);
 }
-
-// 8. An array of objects of length N. Each object has key -> value pair, the key being "y" and the value is a random number
-var dataset = [
-    { "x": "2001", "y": 0.06675321626159603 },
-    { "x": "2002", "y": 0.6054470054732088 },
-    { "x": "2003", "y": 0.1117618112660067 },
-    { "x": "2004", "y": 0.09298066652415626 },
-    { "x": "2005", "y": 0.0065915507045399835 },
-    { "x": "2006", "y": 0.5505246098632617 },
-    { "x": "2007", "y": 0.4812278012583805 },
-    { "x": "2008", "y": 0.7851309848693752 },
-    { "x": "2009", "y": 0.18692547440127383 },
-    { "x": "2010", "y": 0.21738601041445615 }]
-
 
 var crime_data;
 var criminality_idx = {}
