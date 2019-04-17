@@ -33,6 +33,6 @@ Project is created with:
 
 ### Setup
 To run this project, clone the project to your local machine.
-Navigate to the project folder and start the server, for example: E:\workspace\ns-open-data>python -m http.server
-On Chrome new tab type http://localhost:8000/
-For Firefox it works opening direct the index.html file.
+<br />Navigate to the project folder and start the server, for example: E:\workspace\ns-open-data>python -m http.server
+<br />On Chrome new tab type http://localhost:8000/
+<br />For Firefox it works opening direct the index.html file.
