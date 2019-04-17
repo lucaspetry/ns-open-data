@@ -5,7 +5,7 @@
 ### Table of contents
 * [General info](#general-info)
 * [Team Members](#team-members)
-* [Background](#background)
+* [Motivation](#motivation)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
@@ -20,8 +20,8 @@ The idea of the Index Dashboard and this prototype were developed over the weeke
 * Mateus Malvessi Pereira
 
 
-### Background
-There are no precedents for so much data available in our history: it is the big data era. However, it is still challenging to obtain meaningful knowledge from all this data, and make decisions based on that. To take the open data to the next level, we propose an Index Dashboard to be used by government agents, data analysts, or any citizens. It is planned to be an extension for the current Nova Scotia Government’s Open Data Portal. By combining different variables from different datasets, besides being a collaborative tool for exploring the available data, our tool supports the decision making process of public strategies and organizational goals. We take advantage of visual analytics tools for visualizing the geographic distribution of different indexes and their evolution over time. Indexes support measuring efficiencies/inefficiencies, and show trends for any category, or domain, such as crime, education, and healthcare.
+### Motivation
+There are no precedents for so much data available in our history: it is the big data era. However, it is still challenging to obtain meaningful knowledge from all this data and make decisions based on that. To take the open data to the next level, we propose an Index Dashboard to be used by government agents, data analysts, or any citizens. It is planned to be an extension for the current Nova Scotia Government’s Open Data Portal. By combining different variables from different datasets, besides being a collaborative tool for exploring the available data, our tool supports the decision making process of public strategies and organizational goals. We take advantage of visual analytics tools for visualizing the geographic distribution of different indexes and their evolution over time. Indexes support measuring efficiencies/inefficiencies, and show trends for any category, or domain, such as crime, education, and healthcare.
 
 
 ### Technologies
@@ -32,4 +32,7 @@ Project is created with:
 
 
 ### Setup
-To run this project, install it locally.
+To run this project, clone the project to your local machine.
+Navigate to the project folder and start the server, for example: E:\workspace\ns-open-data>python -m http.server
+On Chrome new tab type http://localhost:8000/
+For Firefox it works opening direct the index.html file.
