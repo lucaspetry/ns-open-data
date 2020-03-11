@@ -2,6 +2,8 @@
 
 ## A new way to explore Nova Scotia’s data with an Index Dashboard
 
+![Index Dashboard](https://github.com/lucaspetry/ns-open-data/blob/master/repo/dashboard.png)
+
 ### Table of contents
 * [General info](#general-info)
 * [Team Members](#team-members)
